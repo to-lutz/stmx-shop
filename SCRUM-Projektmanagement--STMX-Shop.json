@@ -1,0 +1,82 @@
+{
+  "data": {
+    "11": {
+      "id": 11,
+      "item": [
+        9005620524993631,
+        1,
+        2,
+        3151731950711565,
+        6267652675435191,
+        8611473151696707,
+        1081362811402387,
+        4028894432757615,
+        3088364994444439,
+        1320394964811837,
+        939126643287059
+      ],
+      "title": "Zu erledigen"
+    },
+    "12": {
+      "id": 12,
+      "item": [],
+      "title": "In Bearbeitung"
+    },
+    "13": {
+      "id": 13,
+      "item": [],
+      "title": "Erledigt"
+    }
+  },
+  "items": {
+    "1": {
+      "id": 1,
+      "title": "Nutzer will Hintergrundbild auf der Startseite"
+    },
+    "2": {
+      "id": 2,
+      "title": "Nutzer will klickbare Links auf der Navbar"
+    },
+    "939126643287059": {
+      "id": 939126643287059,
+      "title": "Nutzer will Light- und Darkmode"
+    },
+    "1081362811402387": {
+      "id": 1081362811402387,
+      "title": "Nutzer will ein ansprechendes Design für die Warenkorbseite"
+    },
+    "1320394964811837": {
+      "id": 1320394964811837,
+      "title": "Nutzer will Produktangebote auf der Startseite"
+    },
+    "3088364994444439": {
+      "id": 3088364994444439,
+      "title": "Nutzer will Ladefortschritt sehen."
+    },
+    "3151731950711565": {
+      "id": 3151731950711565,
+      "title": "Nutzer will ansprechendes Design für die Navbar "
+    },
+    "4028894432757615": {
+      "id": 4028894432757615,
+      "title": "Nutzer will seine in den Warenkorb gelegten Produkte auf der Warenkorbseite sehen"
+    },
+    "6267652675435191": {
+      "id": 6267652675435191,
+      "title": "Entwickler will ein praktisches Layout (modular) für die Navbar"
+    },
+    "8611473151696707": {
+      "id": 8611473151696707,
+      "title": "Entwickler will ein praktisches Layout (modular) für die Warenkorbseite"
+    },
+    "9005620524993631": {
+      "id": 9005620524993631,
+      "title": "Nutzer soll zunächst auf die Startseite gelangen"
+    }
+  },
+  "list": [
+    11,
+    12,
+    13
+  ]
+}
