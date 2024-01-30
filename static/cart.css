@@ -99,6 +99,7 @@
 	width: 45%;
 	height: 30px;
 	color: #707070;
+	cursor: pointer;
 }
 
 .cart-checkout-btn {
@@ -108,4 +109,5 @@
 	width: 50%;
 	height: 30px;
 	color: #fff;
+	cursor: pointer;
 }
