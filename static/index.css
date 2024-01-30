@@ -12,6 +12,16 @@ body {
 	padding: 0;
 }
 
+.colormodeswitch-light {
+	color: #444444;
+	cursor: pointer;
+}
+
+.colormodeswitch-dark {
+	color: #fff;
+	cursor: pointer;
+}
+
 .navbar {
     background-color: #444444;
     position: sticky;

@@ -7,6 +7,17 @@
 	font-family: Lato-Regular;
 }
 
+.colormodeswitch-light {
+	color: #444444;
+	cursor: pointer;
+}
+
+.colormodeswitch-dark {
+	color: #fff;
+	cursor: pointer;
+}
+
+
 body {
 	margin: 0;
 	padding: 0;
