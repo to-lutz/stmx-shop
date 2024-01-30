@@ -7,6 +7,37 @@
 	font-family: Lato-Regular;
 }
 
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.navbar {
+    background-color: #444444;
+    position: sticky;
+    font-size: 2em;
+	height: 75px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	font-size: 20px;
+}	
+
+.navbar-logo {
+	height: 75px;
+	width: 125px;
+}
+
+.navbar a {
+	font-style: none;
+	text-decoration: none;
+	color: #fff;
+}
+
+.navbar a.active {
+	text-decoration: underline;
+}
+
 .wrapper {
 	display: flex;
 	justify-content: center;
