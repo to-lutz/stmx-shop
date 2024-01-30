@@ -1,3 +1,11 @@
+@font-face {
+	font-family: Lato-Regular;
+	src: url(./Lato/Lato-Regular.ttf);
+}
+
+* {
+	font-family: Lato-Regular;
+}
 
 .festgeklebt {
     background-color: hsla(80, 61%, 50%, 0.6);
