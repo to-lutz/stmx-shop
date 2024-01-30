@@ -15,20 +15,50 @@
 					<p>Ihr Warenkorb ist <strong>leer</strong>.</p>
 					<p>Fügen Sie Produkte hinzu um auf dieser Seite zu bezahlen!</p>
 				</div>-->
-				<div class="cart-item">
-					<div class="cart-title">
-						<h5 class="cart-title-text">Testprodukt</h5>
-						<img class="product-image" src="./static/productplaceholder.png"></img>
-					</div>
-					<p class="cart-description">
-						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-					<p>
-					<div class="cart-footer">
-						<div>
-							<p class="price-text">Menge:&nbsp;</p><input class="cart-amount" type="number" value="1" min="0" max="99"/>
+				<div class="cart-wrap-items">
+					<div class="cart-items">
+						<div class="cart-item">
+							<div class="cart-title">
+								<h5 class="cart-title-text">Testprodukt</h5>
+								<img class="product-image" src="./static/productplaceholder.png"></img>
+							</div>
+							<p class="cart-description">
+								Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+							<p>
+							<div class="cart-footer">
+								<div>
+									<p class="price-text">Menge:&nbsp;</p><input class="cart-amount" type="number" value="1" min="0" max="99"/>
+								</div>
+								<div class="price-div">
+									<p class="price-text">Preis: <strong><p class="price-text" id="price">0</p>€</strong></p>
+								</div>
+							</div>
 						</div>
-						<div class="price-div">
-							<p class="price-text">Preis: <strong><p class="price-text" id="price">0</p>€</strong></p>
+					</div>
+					<div class="cart-checkout-modal">
+						<div class="cart-checkout-text-wrap">
+							<p class="cart-subtotal-text">Zwischensumme</p>
+							<div class="cart-subtotal-text">
+								€ <p class="cart-subtotal-text" id="cart-subtotal">0,00</p>
+							</div>
+						</div>
+						<hr class="breakline">
+						<div class="cart-checkout-text-wrap">
+							<p class="cart-checkout-text">zzgl. Versandkosten</p>
+							<div class="cart-checkout-text">
+								€ <p class="cart-checkout-text" id="cart-delivery-cost">0,00</p>
+							</div>
+						</div>
+						<hr class="breakline">
+						<div class="cart-checkout-text-wrap">
+							<p class="cart-subtotal-text">Gesamtsumme</p>
+							<div class="cart-subtotal-text">
+								€ <p class="cart-subtotal-text" id="cart-total">0,00</p>
+							</div>
+						</div>
+						<div class="cart-checkout-buttons">
+							<button onclick="location.href='index.html';" class="cart-continue-shopping-btn">Weiter einkaufen</button>
+							<button class="cart-checkout-btn">Zur Kasse</button>
 						</div>
 					</div>
 				</div>
