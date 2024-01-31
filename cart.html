@@ -13,7 +13,12 @@
 				}
 				return res.json();
 			}).then((data) => {
-				alert(JSON.stringify(data));
+			    for (product in data) {
+				    let node = document.createElement("h1");
+			            node.nodeValue = product;
+				    console.log(node);
+				    document.getElementById("body").appendChild(node);
+				}
 			});
 		</script>
 	</head>
