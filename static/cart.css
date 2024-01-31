@@ -98,6 +98,19 @@ body {
 	display: inline-block;
 }
 
+.price-text-sale {
+	color: #ff3939;
+}
+
+.price-text-noSale {
+	text-decoration: line-through;
+}
+
+.price-text-prct {
+	color: #6fff36;
+	font-weight: bold;
+}
+
 .cart-title-text {
 	font-size: 1.25em;
 }
