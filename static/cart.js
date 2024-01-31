@@ -155,7 +155,7 @@ function getCookie(cname) {
     return "";
 }
 
-// setCookie("stmx_cart_ids", "1:2", 90);
+if (getCookie("stmx_cart_ids").length<2) setCookie("stmx_cart_ids", "1:2", 90);
 
 displayProducts();
 refreshTotalPrice();
