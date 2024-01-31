@@ -33,8 +33,12 @@ ham.addEventListener("click", (e) => {
 });
 
 function displayProducts() {
-    for (productItem in products) {
-        let product = products[productItem];
+    for (id of getCookie("stmx_cart_ids").split(":")) {
+        let product = null;
+        for (productIt in products) {
+            if (products[productIt].id == id) product = products[productIt]
+        }
+        if (product == null) continue;
         let div = document.createElement("div");
         div.className = "cart-item";
         div.id = product.id;
@@ -73,10 +77,20 @@ function displayProducts() {
         }
         document.getElementById("cart-items-wrapper").appendChild(div);
     }
+    if (document.querySelector(".cart-items").childNodes.length == 0) {
+        document.querySelector(".cart-modal").style.display = "block";
+        document.querySelector(".cart-checkout-modal").style.display = "none";
+    }
 }
 
 function updatePrice(price, elemID, isSale, priceNoSale) {
     let amount = document.getElementById("amount-" + elemID).value;
+    if (amount <= 0) {
+        document.getElementById(elemID).remove();
+        setCookie("stmx_cart_ids", getCookie("stmx_cart_ids").replace(elemID, ""), 90)
+        refreshTotalPrice();
+        return;
+    }
     if (isSale) {
         document.getElementById("priceWithoutSale-" + elemID).innerHTML = "<strong>(" + addZeroes(Math.round(priceNoSale*amount*100)/100) + "€)</strong>";
     }
@@ -112,7 +126,36 @@ function refreshTotalPrice() {
     subtotal.innerHTML = addZeroes(subtotalVal);
     delivery.innerHTML = addZeroes(deliveryVal);
     total.innerHTML = addZeroes(totalVal);
+    if (document.querySelector(".cart-items").childNodes.length == 0) {
+        document.querySelector(".cart-modal").style.display = "block";
+        document.querySelector(".cart-checkout-modal").style.display = "none";
+    }
 }
+
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+// setCookie("stmx_cart_ids", "1:2", 90);
 
 displayProducts();
 refreshTotalPrice();
