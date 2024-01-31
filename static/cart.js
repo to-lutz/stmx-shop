@@ -36,7 +36,8 @@ function displayProducts() {
     for (productItem in products) {
         let product = products[productItem];
         let div = document.createElement("div");
-        div.className = "cart-item"
+        div.className = "cart-item";
+        div.id = product.id;
         if (product.sale) {
             div.innerHTML = `
             <div class="cart-title">
@@ -80,6 +81,7 @@ function updatePrice(price, elemID, isSale, priceNoSale) {
         document.getElementById("priceWithoutSale-" + elemID).innerHTML = "<strong>(" + addZeroes(Math.round(priceNoSale*amount*100)/100) + "€)</strong>";
     }
     document.getElementById("price-" + elemID).innerHTML = "<strong>" + addZeroes(Math.round(price*amount*100)/100) + "€</strong>";
+    refreshTotalPrice();
 }
 
 function addZeroes(num) {
@@ -89,4 +91,28 @@ function addZeroes(num) {
     return Number(num).toFixed(len)
 }
 
+function refreshTotalPrice() {
+    let subtotal = document.querySelector("#cart-subtotal");
+    let subtotalVal = 0;
+    let delivery = document.querySelector("#cart-delivery-cost");
+    let deliveryVal = 0;
+    let total = document.querySelector("#cart-total");
+    let totalVal = 0;
+    for (let child of document.querySelector(".cart-items").childNodes) {
+        for (productItem in products) {
+            if (products[productItem].id == child.id) {
+                subtotalVal+=Number(products[productItem].price)*document.querySelector("#amount-" + child.id).value;
+                deliveryVal+=0.99;
+            }
+        }
+    }
+    subtotalVal = Math.round(subtotalVal*100)/100;
+    totalVal = Math.round((subtotalVal + deliveryVal)*100)/100;
+
+    subtotal.innerHTML = addZeroes(subtotalVal);
+    delivery.innerHTML = addZeroes(deliveryVal);
+    total.innerHTML = addZeroes(totalVal);
+}
+
 displayProducts();
+refreshTotalPrice();
