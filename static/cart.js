@@ -85,6 +85,12 @@ function displayProducts() {
 
 function updatePrice(price, elemID, isSale, priceNoSale) {
     let amount = document.getElementById("amount-" + elemID).value;
+    if (amount <= 0) {
+        document.getElementById(elemID).remove();
+        setCookie("stmx_cart_ids", getCookie("stmx_cart_ids").replace(elemID, ""), 90)
+        refreshTotalPrice();
+        return;
+    }
     if (isSale) {
         document.getElementById("priceWithoutSale-" + elemID).innerHTML = "<strong>(" + addZeroes(Math.round(priceNoSale*amount*100)/100) + "€)</strong>";
     }
