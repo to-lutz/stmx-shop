@@ -34,10 +34,10 @@ function displayProducts() {
             <div class="cart-footer">
                 <div>
                     <p class="price-text">Menge:&nbsp;</p>
-                    <input class="cart-amount" type="number" value="1" min="0" max="99"/>
+                    <input id="amount-` + product.id + `" class="cart-amount" type="number" value="1" min="0" max="99" onchange="updatePrice(` + product.price + `, ` + product.id + `, true, `+ product.priceNoSale + `)"/>
                 </div>
                 <div class="price-div">
-                    <p class="price-text">Preis:&nbsp;<strong><p class="price-text price-text-sale" id="price">` + product.price + `€</p>&nbsp;<p class="price-text price-text-noSale" id="priceWithoutSale">(` + product.priceNoSale + `€)</p></strong></p>
+                    <p class="price-text">Preis:&nbsp;<strong><p class="price-text price-text-sale" id="price-` + product.id + `">` + product.price + `€</p>&nbsp;<p class="price-text price-text-noSale" id="priceWithoutSale-` + product.id + `">(` + product.priceNoSale + `€)</p></strong></p>
                 </div>
             </div>`.trim();
         } else {
@@ -50,15 +50,30 @@ function displayProducts() {
             <div class="cart-footer">
                 <div>
                     <p class="price-text">Menge:&nbsp;</p>
-                    <input class="cart-amount" type="number" value="1" min="0" max="99"/>
+                    <input id="amount-` + product.id + `" class="cart-amount" type="number" value="1" min="0" max="99" onchange="updatePrice(` + product.price + `, ` + product.id + `, false, 0)"/>
                 </div>
                 <div class="price-div">
-                    <p class="price-text">Preis:&nbsp;<strong><p class="price-text" id="price">` + product.price + `€</p></strong></p>
+                    <p class="price-text">Preis:&nbsp;<strong><p class="price-text" id="price-` + product.id + `">` + product.price + `€</p></strong></p>
                 </div>
             </div>`.trim();
         }
         document.getElementById("cart-items-wrapper").appendChild(div);
     }
+}
+
+function updatePrice(price, elemID, isSale, priceNoSale) {
+    let amount = document.getElementById("amount-" + elemID).value;
+    if (isSale) {
+        document.getElementById("priceWithoutSale-" + elemID).innerHTML = "<strong>(" + addZeroes(Math.round(priceNoSale*amount*100)/100) + "€)</strong>";
+    }
+    document.getElementById("price-" + elemID).innerHTML = "<strong>" + addZeroes(Math.round(price*amount*100)/100) + "€</strong>";
+}
+
+function addZeroes(num) {
+    num = String(num);
+    const dec = num.split('.')[1]
+    const len = dec && dec.length > 2 ? dec.length : 2
+    return Number(num).toFixed(len)
 }
 
 displayProducts();
