@@ -24,20 +24,39 @@ function displayProducts() {
         let product = products[productItem];
         let div = document.createElement("div");
         div.className = "cart-item"
-        div.innerHTML = `<div class="cart-title">
-            <h5 class="cart-title-text">` + product.name + `</h5>
-            <img class="product-image" src="` + product.imageSrc + `"></img>
-        </div>
-        <p class="cart-description">` + product.description + `<p>
-        <div class="cart-footer">
-            <div>
-                <p class="price-text">Menge:&nbsp;</p>
-                <input class="cart-amount" type="number" value="1" min="0" max="99"/>
+        if (product.sale) {
+            div.innerHTML = `
+            <div class="cart-title">
+                <h5 class="cart-title-text">` + product.name + `</h5>
+                <img class="product-image" src="` + product.imageSrc + `"></img>
             </div>
-            <div class="price-div">
-                <p class="price-text">Preis:&nbsp;<strong><p class="price-text" id="price">` + product.price + `</p>€</strong></p>
+            <p class="cart-description">` + product.description + `<p>
+            <div class="cart-footer">
+                <div>
+                    <p class="price-text">Menge:&nbsp;</p>
+                    <input class="cart-amount" type="number" value="1" min="0" max="99"/>
+                </div>
+                <div class="price-div">
+                    <p class="price-text">Preis:&nbsp;<strong><p class="price-text price-text-sale" id="price">` + product.price + `€</p>&nbsp;<p class="price-text price-text-noSale" id="priceWithoutSale">(` + product.priceNoSale + `€)</p></strong></p>
+                </div>
+            </div>`.trim();
+        } else {
+            div.innerHTML = `
+            <div class="cart-title">
+                <h5 class="cart-title-text">` + product.name + `</h5>
+                <img class="product-image" src="` + product.imageSrc + `"></img>
             </div>
-        </div>`.trim();
+            <p class="cart-description">` + product.description + `<p>
+            <div class="cart-footer">
+                <div>
+                    <p class="price-text">Menge:&nbsp;</p>
+                    <input class="cart-amount" type="number" value="1" min="0" max="99"/>
+                </div>
+                <div class="price-div">
+                    <p class="price-text">Preis:&nbsp;<strong><p class="price-text" id="price">` + product.price + `€</p></strong></p>
+                </div>
+            </div>`.trim();
+        }
         document.getElementById("cart-items-wrapper").appendChild(div);
     }
 }
