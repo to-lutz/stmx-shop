@@ -33,9 +33,9 @@ ham.addEventListener("click", (e) => {
 });
 
 function displayProducts() {
-    for (id in getCookie("stmx_cart_ids").split(":")) {
+    for (id of getCookie("stmx_cart_ids").split(":")) {
         let product = null;
-        for (productIt of products) {
+        for (productIt in products) {
             if (products[productIt].id == id) product = products[productIt]
         }
         if (product == null) continue;
@@ -145,7 +145,7 @@ function getCookie(cname) {
     return "";
 }
 
-setCookie("stmx_cart_ids", "1:2", 90);
+// setCookie("stmx_cart_ids", "1:2", 90);
 
 displayProducts();
 refreshTotalPrice();
