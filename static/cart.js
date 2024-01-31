@@ -33,8 +33,12 @@ ham.addEventListener("click", (e) => {
 });
 
 function displayProducts() {
-    for (productItem in products) {
-        let product = products[productItem];
+    for (id in getCookie("stmx_cart_ids").split(":")) {
+        let product = null;
+        for (productIt of products) {
+            if (products[productIt].id == id) product = products[productIt]
+        }
+        if (product == null) continue;
         let div = document.createElement("div");
         div.className = "cart-item";
         div.id = product.id;
@@ -72,6 +76,10 @@ function displayProducts() {
             </div>`.trim();
         }
         document.getElementById("cart-items-wrapper").appendChild(div);
+    }
+    if (document.querySelector(".cart-items").childNodes.length == 0) {
+        document.querySelector(".cart-modal").style.display = "block";
+        document.querySelector(".cart-checkout-modal").style.display = "none";
     }
 }
 
@@ -114,9 +122,6 @@ function refreshTotalPrice() {
     total.innerHTML = addZeroes(totalVal);
 }
 
-displayProducts();
-refreshTotalPrice();
-
 function setCookie(cname, cvalue, exdays) {
     const d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -140,3 +145,7 @@ function getCookie(cname) {
     return "";
 }
 
+setCookie("stmx_cart_ids", "1:2", 90);
+
+displayProducts();
+refreshTotalPrice();
