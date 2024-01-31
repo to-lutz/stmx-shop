@@ -126,6 +126,10 @@ function refreshTotalPrice() {
     subtotal.innerHTML = addZeroes(subtotalVal);
     delivery.innerHTML = addZeroes(deliveryVal);
     total.innerHTML = addZeroes(totalVal);
+    if (document.querySelector(".cart-items").childNodes.length == 0) {
+        document.querySelector(".cart-modal").style.display = "block";
+        document.querySelector(".cart-checkout-modal").style.display = "none";
+    }
 }
 
 function setCookie(cname, cvalue, exdays) {
