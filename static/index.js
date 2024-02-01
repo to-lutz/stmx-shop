@@ -15,9 +15,14 @@ function isSmallPage() {
     return document.body.clientWidth <= 768;
 }
 
+lastWindowWidth = document.body.clientWidth;
 window.addEventListener("resize", (e) => {
     refreshTheme();
-    console.log("resize");
+    if (lastWindowWidth <= 768 && document.body.clientWidth > 769) {
+        document.querySelector(".responsive-nav").style.display = "none";
+        ham.classList.remove("fa-x");
+        ham.classList.add("fa-bars");
+    }
 });
 
 function refreshTheme() {
