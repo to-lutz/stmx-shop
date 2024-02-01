@@ -11,29 +11,45 @@ ham.addEventListener("click", (e) => {
     }
 });
 
-// Light / Darkmode
-if (getCookie("stmx_mode") == "1") { // Lightmode
-    for (elem of document.querySelectorAll("#darkmode")) {
-        elem.style.display = "none";
-        elem.style.cursor = "default";
+function refreshTheme() {
+    // Light / Darkmode
+    if (getCookie("stmx_mode") == "1") { // Lightmode
+        for (elem of document.querySelectorAll("#darkmode")) {
+            elem.style.display = "none";
+            elem.style.cursor = "default";
+        }
+        for (elem of document.querySelectorAll("#lightmode")) {
+            elem.style.display = "inline-block";
+            elem.style.cursor = "pointer";
+        }
+
+        document.querySelectorAll(".navbar-logo").forEach((e) => {e.src = "./static/STMX-SHOP-WHITE-NOBG.png"});
+    } else if (getCookie("stmx_mode") == ""){ // No mode set, default: dark mode
+        setCookie("stmx_mode", "0", 365);
+        for (elem of document.querySelectorAll("#lightmode")) {
+            elem.style.display = "none";
+            elem.style.cursor = "default";
+        }
+        for (elem of document.querySelectorAll("#darkmode")) {
+            elem.style.display = "inline-block";
+            elem.style.cursor = "pointer";
+        }
+    } else { // Darkmode
+        for (elem of document.querySelectorAll("#lightmode")) {
+            elem.style.display = "none";
+            elem.style.cursor = "default";
+        }
+        for (elem of document.querySelectorAll("#darkmode")) {
+            elem.style.display = "inline-block";
+            elem.style.cursor = "pointer";
+        }
+        
+        document.querySelectorAll(".navbar-logo").forEach((e) => {e.src = "./static/STMX-SHOP-DARK-NOBG.png"});
     }
-    document.querySelectorAll(".navbar-logo").forEach((e) => {e.src = "./static/STMX-SHOP-WHITE-NOBG.png"});
-} else if (getCookie("stmx_mode") == ""){ // No mode set, default: dark mode
-    setCookie("stmx_mode", "0", 365);
-    for (elem of document.querySelectorAll("#lightmode")) {
-        elem.style.display = "none";
-        elem.style.cursor = "default";
-    }
-    for (elem of document.querySelectorAll("*")) {
-        elem.classList.remove("light-mode");
-    }
-} else { // Darkmode
-    for (elem of document.querySelectorAll("#lightmode")) {
-        elem.style.display = "none";
-        elem.style.cursor = "default";
-    }
-    document.querySelectorAll(".navbar-logo").forEach((e) => {e.src = "./static/STMX-SHOP-DARK-NOBG.png"});
 }
+
+document.querySelectorAll("#lightmode").forEach((e) => {e.addEventListener("click", (e) => {setCookie("stmx_mode", "0", 365); refreshTheme();})});
+document.querySelectorAll("#darkmode").forEach((e) => {e.addEventListener("click", (e) => {setCookie("stmx_mode", "1", 365); refreshTheme();})});
 
 function setCookie(cname, cvalue, exdays) {
     const d = new Date();
@@ -57,3 +73,5 @@ function getCookie(cname) {
     }
     return "";
 }
+
+refreshTheme();
