@@ -17,9 +17,7 @@ if (getCookie("stmx_mode") == "1") { // Lightmode
         elem.style.display = "none";
         elem.style.cursor = "default";
     }
-    for (elem of document.querySelectorAll("*")) {
-        elem.classList.add("light-mode");
-    }
+    document.querySelectorAll(".navbar-logo").forEach((e) => {e.src = "./static/STMX-SHOP-WHITE-NOBG.png"});
 } else if (getCookie("stmx_mode") == ""){ // No mode set, default: dark mode
     setCookie("stmx_mode", "0", 365);
     for (elem of document.querySelectorAll("#lightmode")) {
@@ -34,9 +32,7 @@ if (getCookie("stmx_mode") == "1") { // Lightmode
         elem.style.display = "none";
         elem.style.cursor = "default";
     }
-    for (elem of document.querySelectorAll("*")) {
-        elem.classList.remove("light-mode");
-    }
+    document.querySelectorAll(".navbar-logo").forEach((e) => {e.src = "./static/STMX-SHOP-DARK-NOBG.png"});
 }
 
 function setCookie(cname, cvalue, exdays) {
