@@ -55,7 +55,7 @@ function displayProducts() {
                     <input id="amount-` + product.id + `" class="cart-amount" type="number" value="1" min="0" max="99" onchange="updatePrice(` + product.price + `, ` + product.id + `, true, `+ product.priceNoSale + `)"/>
                 </div>
                 <div class="price-div">
-                    <p class="price-text">Preis:&nbsp;<strong><p class="price-text price-text-sale" id="price-` + product.id + `">` + product.price + `€</p>&nbsp;<p class="price-text price-text-noSale" id="priceWithoutSale-` + product.id + `">(` + product.priceNoSale + `€)</p></strong></p>
+                    <p class="price-text">Preis:&nbsp;<strong><p class="price-text price-text-sale price-text-value" id="price-` + product.id + `">` + product.price + `€</p>&nbsp;<p class="price-text price-text-noSale" id="priceWithoutSale-` + product.id + `">(` + product.priceNoSale + `€)</p></strong></p>
                 </div>
             </div>`.trim();
         } else {
@@ -71,7 +71,7 @@ function displayProducts() {
                     <input id="amount-` + product.id + `" class="cart-amount" type="number" value="1" min="0" max="99" onchange="updatePrice(` + product.price + `, ` + product.id + `, false, 0)"/>
                 </div>
                 <div class="price-div">
-                    <p class="price-text">Preis:&nbsp;<strong><p class="price-text" id="price-` + product.id + `">` + product.price + `€</p></strong></p>
+                    <p class="price-text">Preis:&nbsp;<strong><p class="price-text price-text-value" id="price-` + product.id + `">` + product.price + `€</p></strong></p>
                 </div>
             </div>`.trim();
         }

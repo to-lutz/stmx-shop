@@ -59,7 +59,27 @@ body {
 	display: none;
 }
 
+@media screen and (max-width:975px) {
+	.cart-wrap-items {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center !important;
+	}
+
+	.cart-checkout-modal {
+		margin-left: calc(70%/-8);
+	}
+}
+
 @media screen and (max-width:768px) { 
+	.price-text-value {
+		margin: 0 !important;
+	}
+	.price-text-noSale {
+		display: none !important;
+	}
 	.nav-hamburger {
 		cursor: pointer;
 		display: flex !important;
@@ -171,6 +191,11 @@ body {
 
 .cart-checkout-modal {
 	min-width: 350px;
+	width: 30%;
+}
+
+.cart-items {
+	width: 70%;
 }
 
 .cart-subtotal-text {
