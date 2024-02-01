@@ -25,16 +25,12 @@ function refreshTheme() {
 
         document.querySelectorAll(".navbar-logo").forEach((e) => {e.src = "./static/STMX-SHOP-WHITE-NOBG.png"});
         document.querySelector(".navbar").style.backgroundColor="#fff";
+        document.querySelector(".responsive-nav").style.backgroundColor="#fff";
+        document.querySelector(".navbar").querySelectorAll("a").forEach((e) => e.style.color="#000");
+        document.querySelector(".responsive-nav").querySelectorAll("a").forEach((e) => e.style.color="#000");
+
     } else if (getCookie("stmx_mode") == ""){ // No mode set, default: dark mode
         setCookie("stmx_mode", "0", 365);
-        for (elem of document.querySelectorAll("#lightmode")) {
-            elem.style.display = "none";
-            elem.style.cursor = "default";
-        }
-        for (elem of document.querySelectorAll("#darkmode")) {
-            elem.style.display = "inline-block";
-            elem.style.cursor = "pointer";
-        }
     } else { // Darkmode
         for (elem of document.querySelectorAll("#lightmode")) {
             elem.style.display = "none";
@@ -47,6 +43,10 @@ function refreshTheme() {
 
         document.querySelectorAll(".navbar-logo").forEach((e) => {e.src = "./static/STMX-SHOP-DARK-NOBG.png"});
         document.querySelector(".navbar").style.backgroundColor="#444444";
+        document.querySelector(".responsive-nav").style.backgroundColor="#444444";
+        document.querySelector(".navbar").querySelectorAll("a").forEach((e) => e.style.color="#fff");
+        document.querySelector(".responsive-nav").querySelectorAll("a").forEach((e) => e.style.color="#fff");
+
     }
 }
 
