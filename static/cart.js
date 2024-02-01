@@ -15,7 +15,7 @@ const products = {
         "price": 2.99,
         "sale": false,
         "priceNoSale": 2.99,
-        "imageSrc": "",
+        "imageSrc": "./static/banana.jfif",
     }
 };  
 
