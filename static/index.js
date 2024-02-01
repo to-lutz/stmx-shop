@@ -24,6 +24,7 @@ function refreshTheme() {
         }
 
         document.querySelectorAll(".navbar-logo").forEach((e) => {e.src = "./static/STMX-SHOP-WHITE-NOBG.png"});
+        document.querySelector(".navbar").style.backgroundColor="#fff";
     } else if (getCookie("stmx_mode") == ""){ // No mode set, default: dark mode
         setCookie("stmx_mode", "0", 365);
         for (elem of document.querySelectorAll("#lightmode")) {
@@ -43,8 +44,9 @@ function refreshTheme() {
             elem.style.display = "inline-block";
             elem.style.cursor = "pointer";
         }
-        
+
         document.querySelectorAll(".navbar-logo").forEach((e) => {e.src = "./static/STMX-SHOP-DARK-NOBG.png"});
+        document.querySelector(".navbar").style.backgroundColor="#444444";
     }
 }
 
