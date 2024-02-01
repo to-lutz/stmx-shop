@@ -15,6 +15,10 @@ function isSmallPage() {
     return document.body.clientWidth <= 768;
 }
 
+window.addEventListener("resize", (e) => {
+    refreshTheme();
+    console.log("resize");
+});
 
 function refreshTheme() {
     // Light / Darkmode
