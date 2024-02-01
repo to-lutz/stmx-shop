@@ -11,6 +11,34 @@ ham.addEventListener("click", (e) => {
     }
 });
 
+// Light / Darkmode
+if (getCookie("stmx_mode") == "1") { // Lightmode
+    for (elem of document.querySelectorAll("#darkmode")) {
+        elem.style.display = "none";
+        elem.style.cursor = "default";
+    }
+    for (elem of document.querySelectorAll("*")) {
+        elem.classList.add("light-mode");
+    }
+} else if (getCookie("stmx_mode") == ""){ // No mode set, default: dark mode
+    setCookie("stmx_mode", "0", 365);
+    for (elem of document.querySelectorAll("#lightmode")) {
+        elem.style.display = "none";
+        elem.style.cursor = "default";
+    }
+    for (elem of document.querySelectorAll("*")) {
+        elem.classList.remove("light-mode");
+    }
+} else { // Darkmode
+    for (elem of document.querySelectorAll("#lightmode")) {
+        elem.style.display = "none";
+        elem.style.cursor = "default";
+    }
+    for (elem of document.querySelectorAll("*")) {
+        elem.classList.remove("light-mode");
+    }
+}
+
 function setCookie(cname, cvalue, exdays) {
     const d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
