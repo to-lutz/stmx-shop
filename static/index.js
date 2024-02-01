@@ -11,6 +11,11 @@ ham.addEventListener("click", (e) => {
     }
 });
 
+function isSmallPage() {
+    return document.body.clientWidth <= 768;
+}
+
+
 function refreshTheme() {
     // Light / Darkmode
     if (getCookie("stmx_mode") == "1") { // Lightmode
@@ -21,6 +26,12 @@ function refreshTheme() {
         for (elem of document.querySelectorAll("#lightmode")) {
             elem.style.display = "inline-block";
             elem.style.cursor = "pointer";
+        }
+        isSP = isSmallPage();
+        if (isSP) {
+            document.querySelectorAll(".bignav-modeswitch").forEach((e) => e.style.display="none");
+        } else {
+            document.querySelectorAll(".respnav-modeswitch").forEach((e) => e.style.display="none");
         }
 
         document.querySelectorAll(".navbar-logo").forEach((e) => {e.src = "./static/STMX-SHOP-WHITE-NOBG.png"});
@@ -39,6 +50,12 @@ function refreshTheme() {
         for (elem of document.querySelectorAll("#darkmode")) {
             elem.style.display = "inline-block";
             elem.style.cursor = "pointer";
+        }
+        isSP = isSmallPage();
+        if (isSP) {
+            document.querySelectorAll(".bignav-modeswitch").forEach((e) => e.style.display="none");
+        } else {
+            document.querySelectorAll(".respnav-modeswitch").forEach((e) => e.style.display="none");
         }
 
         document.querySelectorAll(".navbar-logo").forEach((e) => {e.src = "./static/STMX-SHOP-DARK-NOBG.png"});
