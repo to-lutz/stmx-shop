@@ -1,3 +1,24 @@
+const products = {
+    "test": {
+        "id": 1,
+        "name": "Testprodukt",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,",
+        "price": 0.99,
+        "sale": true,
+        "priceNoSale": 1.49,
+        "imageSrc": "./static/productplaceholder.png",
+    },
+    "banane": {
+        "id": 2,
+        "name": "Banane",
+        "description": "Die beste Banane, die du jemals essen wirst! So knusprig wie noch nie!",
+        "price": 2.99,
+        "sale": false,
+        "priceNoSale": 2.99,
+        "imageSrc": "./static/banana.jfif",
+    }
+};  
+
 const ham = document.querySelector('.nav-hamburger');
 ham.addEventListener("click", (e) => {
     if (ham.classList.contains("fa-x")){
@@ -13,6 +34,48 @@ ham.addEventListener("click", (e) => {
 
 function isSmallPage() {
     return document.body.clientWidth <= 768;
+}
+
+function updateProductPage() {
+    for (productitem in products) {
+        let product = products[productitem];
+        let div = document.createElement("div");
+        div.className = "product";
+        div.id = product.id;
+        if (product.sale) {
+            div.innerHTML = `
+            <div class="product-title-wrapper">
+                <h3 class="product-title">` + product.name +`</h3>
+                <img class="product-image" src="` + product.imageSrc + `"/>
+            </div>
+            <p class="product-description">` + product.description + `</p>
+            <div class="product-footer">
+                <div class="product-price">
+                    <p class="price-text">Preis:&nbsp;<p class="product-price product-price-val product-price-colour-red">` + product.price + `€</p></p>
+                </div>
+                <div class="product-price-sale">
+                (<p class="product-price-sale product-price-sale-val">` + product.priceNoSale + `€</p>)
+                </div>
+            </div>
+            <button class="product-addtocart-btn">Zum Warenkorb hinzufügen</button>
+            `.trim();
+        } else {
+            div.innerHTML = `
+            <div class="product-title-wrapper">
+                <h3 class="product-title">` + product.name +`</h3>
+                <img class="product-image" src="` + product.imageSrc + `"/>
+            </div>
+            <p class="product-description">` + product.description + `</p>
+            <div class="product-footer">
+                <div class="product-price">
+                    <p class="price-text">Preis:&nbsp;<p class="product-price product-price-val">` + product.price + `€</p></p>
+                </div>
+            </div>
+            <button class="product-addtocart-btn">Zum Warenkorb hinzufügen</button>
+            `.trim();
+        }
+        document.querySelector(".product-wrapper").appendChild(div);
+    }
 }
 
 lastWindowWidth = document.body.clientWidth;
@@ -104,4 +167,12 @@ function getCookie(cname) {
     return "";
 }
 
+function addZeroes(num) {
+    num = String(num);
+    const dec = num.split('.')[1]
+    const len = dec && dec.length > 2 ? dec.length : 2
+    return Number(num).toFixed(len)
+}
+
 refreshTheme();
+updateProductPage();
