@@ -246,8 +246,6 @@ function getCookie(cname) {
     return "";
 }
 
-if (getCookie("stmx_cart_ids").length<2) setCookie("stmx_cart_ids", "1:2", 90);
-
 displayProducts();
 refreshTotalPrice();
 refreshTheme();
