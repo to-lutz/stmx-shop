@@ -150,6 +150,27 @@ function displayProducts() {
     if (document.querySelector(".cart-items").childNodes.length == 0) {
         document.querySelector(".cart-modal").style.display = "block";
         document.querySelector(".cart-checkout-modal").style.display = "none";
+        document.querySelector(".cart-items").style.display = "none";
+        // Dummy Item
+        // let div = document.createElement("div");
+        // div.className = "cart-item";
+        // div.id = 0;
+        // div.innerHTML = `
+        //     <div class="cart-title">
+        //         <h5 class="cart-title-text">Banane</h5>
+        //         <img class="product-image" src="./static/banana.jfif"></img>
+        //     </div>
+        //     <p class="cart-description">supi knusprige banane mmmmmm lecker boahh<p>
+        //     <div class="cart-footer">
+        //         <div>
+        //             <p class="price-text">Menge:&nbsp;</p>
+        //             <input id="amount-0" class="cart-amount" type="number" value="1" min="0" max="99" onchange="updatePrice(899.99, 0, false, 899.99)"/>
+        //         </div>
+        //         <div class="price-div">
+        //             <p class="price-text">Preis:&nbsp;<strong><p class="price-text price-text-value" id="price-0">899.99€</p></strong></p>
+        //         </div>
+        //     </div>`.trim();
+        // document.getElementById("cart-items-wrapper").appendChild(div);
     }
 }
 

@@ -21,6 +21,7 @@
 body {
 	margin: 0;
 	padding: 0;
+	background-color: #e9e9e9;
 }
 
 .navbar {
@@ -124,6 +125,12 @@ body {
 	flex-wrap: wrap;
 }
 
+#cart-items-wrapper {
+	background-color: #fff;
+	padding: 50px;
+	border-radius: 7px;
+}
+
 .cart-modal {
 	display: none;
 	background-color: rgba(56, 182, 217, 0.2);
@@ -192,6 +199,10 @@ body {
 .cart-checkout-modal {
 	min-width: 350px;
 	width: 30%;
+	margin-left: 50px;
+	background-color: #fff;
+	padding: 50px;
+	border-radius: 7px;
 }
 
 .cart-items {
