@@ -57,7 +57,7 @@ function updateProductPage() {
                 (<p class="product-price-sale product-price-sale-val">` + product.priceNoSale + `€</p>)
                 </div>
             </div>
-            <button class="product-addtocart-btn">Zum Warenkorb hinzufügen</button>
+            <button class="product-addtocart-btn id="addtocart-` + product.id + `">Zum Warenkorb hinzufügen</button>
             `.trim();
         } else {
             div.innerHTML = `
@@ -71,10 +71,15 @@ function updateProductPage() {
                     <p class="price-text">Preis:&nbsp;<p class="product-price product-price-val">` + product.price + `€</p></p>
                 </div>
             </div>
-            <button class="product-addtocart-btn">Zum Warenkorb hinzufügen</button>
+            <button class="product-addtocart-btn" id="addtocart-` + product.id + `">Zum Warenkorb hinzufügen</button>
             `.trim();
         }
         document.querySelector(".product-wrapper").appendChild(div);
+        
+        div.addEventListener("click", (e) => {
+            setCookie("stmx_cart_ids", getCookie("stmx_cart_ids") + String(product.id).replace("addtocart-", "") + ":");
+            alert("Add product " + product.id + " to cart!");
+        });
     }
 }
 
