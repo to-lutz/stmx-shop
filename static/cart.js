@@ -180,7 +180,7 @@ function updatePrice(price, elemID, isSale, priceNoSale) {
         document.getElementById(elemID).remove();
         setCookie("stmx_cart_ids", getCookie("stmx_cart_ids").replace(elemID, ""), 90);
         refreshTotalPrice();
-        if (getCookie("stmx_cart_ids").replace(":", "") == "") {
+        if (getCookie("stmx_cart_ids").replaceAll(":", "") == "") {
             document.querySelector(".cart-items").style.display = "none";
         }
         return;
