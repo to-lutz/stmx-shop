@@ -57,7 +57,7 @@ function updateProductPage() {
                 (<p class="product-price-sale product-price-sale-val">` + product.priceNoSale + `€</p>)
                 </div>
             </div>
-            <button class="product-addtocart-btn id="addtocart-` + product.id + `">Zum Warenkorb hinzufügen</button>
+            <button class="product-addtocart-btn" id="addtocart-` + product.id + `">Zum Warenkorb hinzufügen</button>
             `.trim();
         } else {
             div.innerHTML = `
@@ -76,9 +76,12 @@ function updateProductPage() {
         }
         document.querySelector(".product-wrapper").appendChild(div);
         
-        div.addEventListener("click", (e) => {
-            setCookie("stmx_cart_ids", getCookie("stmx_cart_ids") + String(product.id).replace("addtocart-", "") + ":");
-            alert("Add product " + product.id + " to cart!");
+        document.querySelectorAll(".product-addtocart-btn").forEach((e) => {
+            e.addEventListener("click", (e) => {
+                console.log(e.target.id);
+                setCookie("stmx_cart_ids", getCookie("stmx_cart_ids") + String(e.target.id).replace("addtocart-", "") + ":");
+                alert("Add product " + e.target.id + " to cart!");
+            });
         });
     }
 }
