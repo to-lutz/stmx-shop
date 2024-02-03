@@ -58,8 +58,19 @@ function refreshTheme() {
         document.querySelector(".responsive-nav").querySelectorAll("a").forEach((e) => e.style.color="#000");
         document.querySelectorAll(".nav-hamburger").forEach((e) => e.style.color="#000");
 
+        document.body.style.backgroundColor="#e9e9e9";
+        document.querySelector(".header").style.color="#000";
+        document.querySelector(".cart-items").style.backgroundColor="#fff";
+        document.querySelectorAll(".cart-title-text").forEach((e) => e.style.color="#000");
+        document.querySelectorAll(".cart-description").forEach((e) => e.style.color="#000");
+        document.querySelectorAll(".price-text").forEach((e) => e.style.color="#000");
+        document.querySelectorAll(".price-text-sale").forEach((e) => e.style.color="#ff3939");
+        document.querySelectorAll(".cart-checkout-modal").forEach((e) => e.style.backgroundColor="#fff");
+        document.querySelectorAll(".cart-subtotal-text").forEach((e) => e.style.color="#000");
+        document.querySelectorAll(".cart-checkout-text").forEach((e) => e.style.color="#000");
     } else if (getCookie("stmx_mode") == ""){ // No mode set, default: dark mode
         setCookie("stmx_mode", "0", 365);
+        refreshTheme();
     } else { // Darkmode
         for (elem of document.querySelectorAll("#lightmode")) {
             elem.style.display = "none";
@@ -83,6 +94,16 @@ function refreshTheme() {
         document.querySelector(".responsive-nav").querySelectorAll("a").forEach((e) => e.style.color="#fff");
         document.querySelectorAll(".nav-hamburger").forEach((e) => e.style.color="#fff");
 
+        document.body.style.backgroundColor="#818181";
+        document.querySelector(".header").style.color="#fff";
+        document.querySelector(".cart-items").style.backgroundColor="#444";
+        document.querySelectorAll(".cart-title-text").forEach((e) => e.style.color="#fff");
+        document.querySelectorAll(".cart-description").forEach((e) => e.style.color="#fff");
+        document.querySelectorAll(".price-text").forEach((e) => e.style.color="#fff");
+        document.querySelectorAll(".price-text-sale").forEach((e) => e.style.color="#ff3939");
+        document.querySelectorAll(".cart-checkout-modal").forEach((e) => e.style.backgroundColor="#444");
+        document.querySelectorAll(".cart-subtotal-text").forEach((e) => e.style.color="#fff");
+        document.querySelectorAll(".cart-checkout-text").forEach((e) => e.style.color="#fff");
     }
 }
 
