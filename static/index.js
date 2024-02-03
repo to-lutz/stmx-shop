@@ -120,8 +120,17 @@ function refreshTheme() {
         document.querySelector(".responsive-nav").querySelectorAll("a").forEach((e) => e.style.color="#000");
         document.querySelectorAll(".nav-hamburger").forEach((e) => e.style.color="#000");
 
+        document.body.style.backgroundColor="#e9e9e9";
+        document.querySelectorAll(".product").forEach((e) => e.style.backgroundColor="#fff");
+        document.querySelectorAll(".product-title").forEach((e) => e.style.color="#000");
+        document.querySelectorAll(".product-description").forEach((e) => e.style.color="#000");
+        document.querySelectorAll(".price-text").forEach((e) => e.style.color="#000");
+        document.querySelectorAll(".product-price-val").forEach((e) => e.style.color="#000");
+        document.querySelectorAll(".product-price-sale").forEach((e) => e.style.color="#000");
+
     } else if (getCookie("stmx_mode") == ""){ // No mode set, default: dark mode
         setCookie("stmx_mode", "0", 365);
+        refreshTheme();
     } else { // Darkmode
         for (elem of document.querySelectorAll("#lightmode")) {
             elem.style.display = "none";
@@ -144,6 +153,14 @@ function refreshTheme() {
         document.querySelector(".navbar").querySelectorAll("a").forEach((e) => e.style.color="#fff");
         document.querySelector(".responsive-nav").querySelectorAll("a").forEach((e) => e.style.color="#fff");
         document.querySelectorAll(".nav-hamburger").forEach((e) => e.style.color="#fff");
+
+        document.body.style.backgroundColor="#818181";
+        document.querySelectorAll(".product").forEach((e) => e.style.backgroundColor="#444");
+        document.querySelectorAll(".product-title").forEach((e) => e.style.color="#fff");
+        document.querySelectorAll(".product-description").forEach((e) => e.style.color="#fff");
+        document.querySelectorAll(".price-text").forEach((e) => e.style.color="#fff");
+        document.querySelectorAll(".product-price-val").forEach((e) => e.style.color="#fff");
+        document.querySelectorAll(".product-price-sale").forEach((e) => e.style.color="#fff");
 
     }
 }
@@ -181,5 +198,5 @@ function addZeroes(num) {
     return Number(num).toFixed(len)
 }
 
-refreshTheme();
 updateProductPage();
+refreshTheme();
