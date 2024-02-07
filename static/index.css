@@ -168,3 +168,11 @@ body {
 		margin: 25px 0;
 	}
 }
+footer {
+	padding: 10px 20px;
+	background: #666;
+	color: rgb(66, 61, 61);
+  }
+  footer > a{
+	color: #232525;
+  }
