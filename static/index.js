@@ -114,10 +114,15 @@ function updateProductPage() {
     }
     document.querySelectorAll(".product-addtocart-btn").forEach((e) => {
         e.addEventListener("click", (e) => {
-            console.log(e.target.id);
             setCookie("stmx_cart_ids", getCookie("stmx_cart_ids") + String(e.target.id).replace("addtocart-", "") + ":");
-            alert("Add product " + e.target.id + " to cart!");
+            document.querySelector(".addtocart-modal-wrapper").style.display = "flex";
+            document.querySelector("#addtocart-modal-item").innerHTML = e.target.id;
         });
+    });
+    document.querySelector(".addtocart-modal-continueshop-btn").addEventListener("click", (e) => document.querySelector(".addtocart-modal-wrapper").style.display = "none");
+    document.querySelector(".addtocart-modal-cart-btn").addEventListener("click", (e) => {
+        document.querySelector(".addtocart-modal-wrapper").style.display = "none";
+        window.location.href = "cart.html";
     });
 }
 
