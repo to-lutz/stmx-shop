@@ -169,10 +169,14 @@ body {
 	}
 }
 footer {
-	padding: 10px 20px;
-	background: #666;
-	color: rgb(66, 61, 61);
-  }
-  footer > a{
-	color: #232525;
-  }
+      padding: 10px 20px;
+      background: #666;
+      color: #ffffff;
+      position:absolute;
+      bottom: 0;
+      width: 100%;
+}
+
+.align-center {
+      text-align: center;
+}
