@@ -186,10 +186,10 @@ footer {
     padding: 10px 0px;
     background: #666;
     color: #ffffff;
-    position:absolute;
-    bottom: 0;
+    position:relative;
+    bottom: -30px;
     width: 100%;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 .align-center {
