@@ -3,6 +3,12 @@
 	src: url(./Lato/Lato-Regular.ttf);
 }
 
+@font-face {
+	font-family: Guerilla-Regular;
+	src: url(./Guerilla/Guerilla-Regular.ttf);
+}
+
+
 * {
 	font-family: Lato-Regular;
 }
@@ -194,4 +200,27 @@ footer {
 
 .align-center {
     text-align: center;
+}
+
+.banner-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.banner {
+	width: 50%;
+	height: 50px;
+	transform: skew(-20deg);
+	background: red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner-text {
+	transform: skew(20deg);
+	text-align: center;
+	color: #fff;
+	font-family: Guerilla-Regular;
+	font-size: 35px;
 }
