@@ -173,6 +173,9 @@ function refreshTheme() {
         document.querySelectorAll(".price-text").forEach((e) => e.style.color="#000");
         document.querySelectorAll(".product-price-val").forEach((e) => e.style.color="#000");
         document.querySelectorAll(".product-price-sale").forEach((e) => e.style.color="#000");
+        document.querySelector(".addtocart-modal").style.backgroundColor="#fff";
+        document.querySelectorAll(".addtocart-modal-header").forEach((e) => e.style.color = "#000");
+        document.querySelector("#addtocart-modal-item").style.color = "#000";
 
     } else if (getCookie("stmx_mode") == ""){ // No mode set, default: dark mode
         setCookie("stmx_mode", "0", 365);
@@ -207,6 +210,9 @@ function refreshTheme() {
         document.querySelectorAll(".price-text").forEach((e) => e.style.color="#fff");
         document.querySelectorAll(".product-price-val").forEach((e) => e.style.color="#fff");
         document.querySelectorAll(".product-price-sale").forEach((e) => e.style.color="#fff");
+        document.querySelector(".addtocart-modal").style.backgroundColor="#444";
+        document.querySelectorAll(".addtocart-modal-header").forEach((e) => e.style.color = "#fff");
+        document.querySelector("#addtocart-modal-item").style.color = "#fff";
 
     }
 }
