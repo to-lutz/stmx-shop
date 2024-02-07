@@ -116,7 +116,12 @@ function updateProductPage() {
         e.addEventListener("click", (e) => {
             setCookie("stmx_cart_ids", getCookie("stmx_cart_ids") + String(e.target.id).replace("addtocart-", "") + ":");
             document.querySelector(".addtocart-modal-wrapper").style.display = "flex";
-            document.querySelector("#addtocart-modal-item").innerHTML = e.target.id;
+            let pName = "?";
+            for (productitem in products) {
+                let product = products[productitem];
+                if (product.id == Number(String(e.target.id).replace("addtocart-", ""))) pName = product.name;
+            }
+            document.querySelector("#addtocart-modal-item").innerHTML = pName;
         });
     });
     document.querySelector(".addtocart-modal-continueshop-btn").addEventListener("click", (e) => document.querySelector(".addtocart-modal-wrapper").style.display = "none");
