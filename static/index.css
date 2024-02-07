@@ -98,12 +98,16 @@ body {
 	margin-top: 20px;
 	display: flex;
 	justify-content: space-evenly;
+	flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .product{
 	border-radius: 7px;
 	padding: 30px;
 	background-color: #fff;
+	min-width: 450px;
+	margin: 25px;
 }
 
 .product-footer {
