@@ -16,6 +16,42 @@ const products = {
         "sale": false,
         "priceNoSale": 2.99,
         "imageSrc": "./static/banana.jfif",
+    },
+    "3090": {
+        "id": 3,
+        "name": "ASUS GeForce RTX™ 3090 ROG Strix Gaming OC White 24GB",
+        "description": "Eine GPU von ASUS in weiß die von Marcel Leven sehr begehrt wird, sie liefert die optimale Leistung für ihren PC!",
+        "price": 2.99,
+        "sale": false,
+        "priceNoSale": 2.99,
+        "imageSrc": "./static/.jfif",
+    },
+    "felge": {
+        "id": 4,
+        "name": "BBS Super RS silber",
+        "description": "Felgen aus dem Hause BBS in Silber. Diese verleihen ihrem Fahrbarenuntersatz auf 4 Rädern den letzten Schliff!",
+        "price": 1545.00,
+        "sale": false,
+        "priceNoSale": 1545.00,
+        "imageSrc": "./static/.jfif",
+    },  
+    "salsa": {
+        "id": 5,
+        "name": "Tapatío Salsa Picante Hot Sauce 148ml",
+        "description": "",
+        "price": 5.00,
+        "sale": false,
+        "priceNoSale": 5.00,
+        "imageSrc": "./static/.jfif",
+    },
+    "hotdog": {
+        "id": 6,
+        "name": "IKEA HotDog",
+        "description": "Jeder kennt ihn jeder liebt ihn den klassischen HotDog von IKEA zu Preis von 1.00€",
+        "price": 1.00,
+        "sale": false,
+        "priceNoSale": 1.00,
+        "imageSrc": "./static/.jfif",
     }
 };  
 
