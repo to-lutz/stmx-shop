@@ -172,6 +172,16 @@ body {
 		margin: 25px 0;
 	}
 }
+
+@media screen and (min-width: 1311px) {
+	.product-wrapper {
+		margin-top: 20px;
+		display: flex;
+		justify-content: space-evenly;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+}
 footer {
     padding: 10px 0px;
     background: #666;
