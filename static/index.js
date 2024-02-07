@@ -15,7 +15,7 @@ const products = {
         "price": 2.99,
         "sale": false,
         "priceNoSale": 2.99,
-        "imageSrc": "./static/.jfif",
+        "imageSrc": "./static/banana.jfif",
     },
     "3090": {
         "id": 3,
