@@ -3,6 +3,12 @@
 	src: url(./Lato/Lato-Regular.ttf);
 }
 
+@font-face {
+	font-family: Guerilla-Regular;
+	src: url(./Guerilla/Guerilla-Regular.ttf);
+}
+
+
 * {
 	font-family: Lato-Regular;
 }
@@ -94,7 +100,7 @@ body {
 	}
 }
 
-.product-wrapper {
+.product-wrapper, .product-sales-wrapper {
 	margin-top: 20px;
 	display: flex;
 	justify-content: space-evenly;
@@ -163,7 +169,7 @@ body {
 }
 
 @media screen and (max-width: 1310px) {
-	.product-wrapper {
+	.product-wrapper, .product-sales-wrapper {
 		flex-direction: column;
 		align-items: center;
 	}
@@ -172,18 +178,51 @@ body {
 		margin: 25px 0;
 	}
 }
+
+@media screen and (min-width: 1311px) {
+	.product-wrapper, .product-sales-wrapper {
+		margin-top: 20px;
+		display: flex;
+		justify-content: space-evenly;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+}
 footer {
     padding: 10px 0px;
     background: #666;
     color: #ffffff;
-    position:absolute;
-    bottom: 0;
+    position:relative;
+    bottom: -30px;
     width: 100%;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 .align-center {
     text-align: center;
+}
+
+.banner-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.banner {
+	width: 50%;
+	height: 50px;
+	transform: skew(-20deg);
+	background: red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner-text {
+	transform: skew(20deg);
+	text-align: center;
+	color: #fff;
+	font-family: Guerilla-Regular;
+	font-size: 35px;
 }
 
 .addtocart-modal {
