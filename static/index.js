@@ -114,10 +114,20 @@ function updateProductPage() {
     }
     document.querySelectorAll(".product-addtocart-btn").forEach((e) => {
         e.addEventListener("click", (e) => {
-            console.log(e.target.id);
             setCookie("stmx_cart_ids", getCookie("stmx_cart_ids") + String(e.target.id).replace("addtocart-", "") + ":");
-            alert("Add product " + e.target.id + " to cart!");
+            document.querySelector(".addtocart-modal-wrapper").style.display = "flex";
+            let pName = "?";
+            for (productitem in products) {
+                let product = products[productitem];
+                if (product.id == Number(String(e.target.id).replace("addtocart-", ""))) pName = product.name;
+            }
+            document.querySelector("#addtocart-modal-item").innerHTML = pName;
         });
+    });
+    document.querySelector(".addtocart-modal-continueshop-btn").addEventListener("click", (e) => document.querySelector(".addtocart-modal-wrapper").style.display = "none");
+    document.querySelector(".addtocart-modal-cart-btn").addEventListener("click", (e) => {
+        document.querySelector(".addtocart-modal-wrapper").style.display = "none";
+        window.location.href = "cart.html";
     });
 }
 
@@ -163,6 +173,9 @@ function refreshTheme() {
         document.querySelectorAll(".price-text").forEach((e) => e.style.color="#000");
         document.querySelectorAll(".product-price-val").forEach((e) => e.style.color="#000");
         document.querySelectorAll(".product-price-sale").forEach((e) => e.style.color="#000");
+        document.querySelector(".addtocart-modal").style.backgroundColor="#fff";
+        document.querySelectorAll(".addtocart-modal-header").forEach((e) => e.style.color = "#000");
+        document.querySelector("#addtocart-modal-item").style.color = "#000";
 
     } else if (getCookie("stmx_mode") == ""){ // No mode set, default: dark mode
         setCookie("stmx_mode", "0", 365);
@@ -197,6 +210,9 @@ function refreshTheme() {
         document.querySelectorAll(".price-text").forEach((e) => e.style.color="#fff");
         document.querySelectorAll(".product-price-val").forEach((e) => e.style.color="#fff");
         document.querySelectorAll(".product-price-sale").forEach((e) => e.style.color="#fff");
+        document.querySelector(".addtocart-modal").style.backgroundColor="#444";
+        document.querySelectorAll(".addtocart-modal-header").forEach((e) => e.style.color = "#fff");
+        document.querySelector("#addtocart-modal-item").style.color = "#fff";
 
     }
 }
