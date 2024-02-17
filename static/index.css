@@ -288,6 +288,12 @@ footer {
 	justify-content: center;
 }
 
+.wrap-header {
+	background-color: #333;
+	margin-bottom: 50px;
+	border-radius: 0 0 50% 50% / 50px;
+}
+
 .header-wrapper {
 	display: flex;
 	justify-content: center;
