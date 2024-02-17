@@ -100,7 +100,7 @@ body {
 	}
 }
 
-.product-wrapper, .product-sales-wrapper, .product-famous-wrapper {
+.product-wrapper, .product-sales-wrapper {
 	margin-top: 20px;
 	display: flex;
 	justify-content: space-evenly;
@@ -169,7 +169,7 @@ body {
 }
 
 @media screen and (max-width: 1310px) {
-	.product-wrapper, .product-sales-wrapper, .product-famous-wrapper  {
+	.product-wrapper, .product-sales-wrapper {
 		flex-direction: column;
 		align-items: center;
 	}
@@ -180,7 +180,7 @@ body {
 }
 
 @media screen and (min-width: 1311px) {
-	.product-wrapper, .product-sales-wrapper, .product-famous-wrapper  {
+	.product-wrapper, .product-sales-wrapper {
 		margin-top: 20px;
 		display: flex;
 		justify-content: space-evenly;
@@ -281,34 +281,4 @@ footer {
 	color: #707070;
 	width: 40%;
 	cursor: pointer;
-}
-
-.wrapper {
-	display: flex;
-	justify-content: center;
-}
-
-.wrap-header {
-	background-color: #333;
-	margin-bottom: 50px;
-	border-radius: 0 0 50% 50% / 50px;
-}
-
-.header-wrapper {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	vertical-align: top;
-	text-align: center;
-	color: #fff;
-	width: 350px;
-}
-
-.secondary-header {
-	margin-top: -50px;
-}
-
-.header-logo {
-	height: 210px;
-	width: 350px;
 }

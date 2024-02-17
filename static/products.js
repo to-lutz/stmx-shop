@@ -73,16 +73,6 @@ function isSmallPage() {
 }
 
 function updateProductPage() {
-    let firstHighestSale = 0;
-    let secondHighestSale = 0;
-    let thirdHighestSale = 0;
-    let firstSaleDiv = null;
-    let secondSaleDiv = null;
-    let thirdSaleDiv = null;
-    let firstExpensive = 0;
-    let secondExpensive = 0;
-    let firstExpensiveDiv = null;
-    let secondExpensiveDiv = null;
     for (productitem in products) {
         let product = products[productitem];
         let div = document.createElement("div");
@@ -105,46 +95,6 @@ function updateProductPage() {
             </div>
             <button class="product-addtocart-btn" id="addtocart-` + product.id + `">Zum Warenkorb hinzufügen</button>
             `.trim();
-            
-            if (product.price > firstExpensive) {
-                if (firstExpensiveDiv != null && secondExpensiveDiv == null) {
-                    secondExpensive = firstExpensive;
-                    secondExpensiveDiv = firstExpensiveDiv;
-                }
-                firstExpensive = product.price;
-                firstExpensiveDiv = div.cloneNode(true);
-            } else if (product.price > secondExpensive) {
-                secondExpensive = product.price;
-                secondExpensiveDiv = div.cloneNode(true);
-            }
-
-            // Add sales > 50% (max 3) to landing page
-            let salePercent = product.price / product.priceNoSale;
-            if (salePercent > firstHighestSale) {
-                if (firstSaleDiv != null) {
-                    if (secondSaleDiv == null) {
-                        secondSaleDiv = firstSaleDiv;
-                        secondHighestSale = firstHighestSale;
-                    } else if (thirdSaleDiv == null) {
-                        thirdSaleDiv = firstSaleDiv;
-                        thirdHighestSale = firstHighestSale;
-                    }
-                }
-                firstHighestSale = salePercent;
-                firstSaleDiv = div.cloneNode(true);
-            } else if (salePercent > secondHighestSale) {
-                if (secondSaleDiv != null) {
-                    if (thirdSaleDiv == null) {
-                        thirdSaleDiv = secondSaleDiv;
-                        thirdHighestSale = secondHighestSale;
-                    }
-                }
-                secondHighestSale = salePercent;
-                secondSaleDiv = div.cloneNode(true);
-            } else if (salePercent > thirdHighestSale) {
-                thirdHighestSale = salePercent;
-                thirdSaleDiv = div.cloneNode(true);
-            }
         } else {
             div.innerHTML = `
             <div class="product-title-wrapper">
@@ -159,29 +109,9 @@ function updateProductPage() {
             </div>
             <button class="product-addtocart-btn" id="addtocart-` + product.id + `">Zum Warenkorb hinzufügen</button>
             `.trim();
-
-            if (product.price > firstExpensive) {
-                if (firstExpensiveDiv != null && secondExpensiveDiv == null) {
-                    secondExpensive = firstExpensive;
-                    secondExpensiveDiv = firstExpensiveDiv;
-                }
-                firstExpensive = product.price;
-                firstExpensiveDiv = div.cloneNode(true);
-            } else if (product.price > secondExpensive) {
-                secondExpensive = product.price;
-                secondExpensiveDiv = div.cloneNode(true);
-            }
         }
+        document.querySelector(".product-wrapper").appendChild(div);
     }
-
-    if (firstSaleDiv != null) document.querySelector(".product-sales-wrapper").appendChild(firstSaleDiv);
-    if (secondSaleDiv != null) document.querySelector(".product-sales-wrapper").appendChild(secondSaleDiv);
-    if (thirdSaleDiv != null) document.querySelector(".product-sales-wrapper").appendChild(thirdSaleDiv);
-
-
-    if (firstExpensiveDiv != null) document.querySelector(".product-famous-wrapper").appendChild(firstExpensiveDiv); // Hier werden die teuersten Produkte zu Beliebteste Produkte hinzugefügt; Es gibt keinen "Tracker" wie oft ein Produkt gekauft wird
-    if (secondExpensiveDiv != null) document.querySelector(".product-famous-wrapper").appendChild(secondExpensiveDiv);
-
     document.querySelectorAll(".product-addtocart-btn").forEach((e) => {
         e.addEventListener("click", (e) => {
             setCookie("stmx_cart_ids", getCookie("stmx_cart_ids") + String(e.target.id).replace("addtocart-", "") + ":");

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <link rel="stylesheet" href="./static/products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STMX Shop</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <img class="navbar-logo" src="./static/STMX-SHOP-DARK-NOBG.png"/>
+      <a href="index.html">Startseite</a>
+      <a class="active" href="products.html">Unsere Produkte</a>
+      <a href="cart.html">Warenkorb</a>
+      <i class="fa-solid fa-moon colormodeswitch-light bignav-modeswitch" id="lightmode"></i>
+      <i class="fa-solid fa-sun colormodeswitch-dark bignav-modeswitch" id="darkmode"></i>
+      <i class="fa-solid fa-bars nav-hamburger"></i>
+    </div>
+    <div class="responsive-nav">
+      <div class="responsive-nav-container">
+        <a href="index.html">Startseite</a>
+        <a class="active" href="products.html">Unsere Produkte</a>
+        <a href="cart.html">Warenkorb</a>
+        <i class="fa-solid fa-moon colormodeswitch-light respnav-modeswitch" id="lightmode"></i>
+        <i class="fa-solid fa-sun colormodeswitch-dark respnav-modeswitch" id="darkmode"></i>
+      </div>
+    </div>
+    <div class="addtocart-modal-wrapper">
+      <div class="addtocart-modal">
+        <h1 class="addtocart-modal-header">Das Produkt wurde dem Warenkorb hinzugefügt!</h1>
+        <h4 class="addtocart-modal-header">Produktname: <p id="addtocart-modal-item">?</p></h4>
+        <div class="addtocart-modal-btnwrap">
+          <button class="addtocart-modal-continueshop-btn">Weiter einkaufen</button>
+          <button class="addtocart-modal-cart-btn">Zum Einkaufswagen</button>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="product-wrapper"></div>
+    </div>
+
+    <footer>	
+      <p class="align-center">©&nbsp;2024&nbsp;stmx-shop.bplaced.net&nbsp;|&nbsp;Alle Rechte vorbehalten.</p>
+    </footer>
+    <script src="./static/products.js"></script>
+  </body>
+</html>
