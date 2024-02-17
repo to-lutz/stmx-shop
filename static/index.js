@@ -229,6 +229,8 @@ function refreshTheme() {
             document.querySelectorAll(".respnav-modeswitch").forEach((e) => e.style.display="none");
         }
 
+        // Lightmode
+
         document.querySelectorAll(".navbar-logo").forEach((e) => {e.src = "./static/STMX-SHOP-WHITE-NOBG.png"});
         document.querySelector(".navbar").style.backgroundColor="#fff";
         document.querySelector(".responsive-nav").style.backgroundColor="#fff";
@@ -246,6 +248,9 @@ function refreshTheme() {
         document.querySelector(".addtocart-modal").style.backgroundColor="#fff";
         document.querySelectorAll(".addtocart-modal-header").forEach((e) => e.style.color = "#000");
         document.querySelector("#addtocart-modal-item").style.color = "#000";
+        document.querySelector(".wrap-header").style.backgroundColor = "#c7c7c7";
+        document.querySelector(".header-logo").src = "./static/STMX-SHOP-WHITE-NOBG.png";
+        document.querySelector(".header-wrapper").style.color="#464646";
 
     } else if (getCookie("stmx_mode") == ""){ // No mode set, default: dark mode
         setCookie("stmx_mode", "0", 365);
@@ -266,6 +271,8 @@ function refreshTheme() {
             document.querySelectorAll(".respnav-modeswitch").forEach((e) => e.style.display="none");
         }
 
+        // Darkmode
+
         document.querySelectorAll(".navbar-logo").forEach((e) => {e.src = "./static/STMX-SHOP-DARK-NOBG.png"});
         document.querySelector(".navbar").style.backgroundColor="#444444";
         document.querySelector(".responsive-nav").style.backgroundColor="#444444";
@@ -283,7 +290,9 @@ function refreshTheme() {
         document.querySelector(".addtocart-modal").style.backgroundColor="#444";
         document.querySelectorAll(".addtocart-modal-header").forEach((e) => e.style.color = "#fff");
         document.querySelector("#addtocart-modal-item").style.color = "#fff";
-
+        document.querySelector(".wrap-header").style.backgroundColor = "#333";
+        document.querySelector(".header-logo").src = "./static/STMX-SHOP-DARK-NOBG.png";
+        document.querySelector(".header-wrapper").style.color="#fff";
     }
 }
 
