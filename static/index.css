@@ -282,3 +282,27 @@ footer {
 	width: 40%;
 	cursor: pointer;
 }
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.header-wrapper {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	vertical-align: top;
+	text-align: center;
+	color: #fff;
+	width: 350px;
+}
+
+.secondary-header {
+	margin-top: -50px;
+}
+
+.header-logo {
+	height: 210px;
+	width: 350px;
+}
