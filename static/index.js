@@ -144,7 +144,6 @@ function updateProductPage() {
             <button class="product-addtocart-btn" id="addtocart-` + product.id + `">Zum Warenkorb hinzufügen</button>
             `.trim();
         }
-        document.querySelector(".product-wrapper").appendChild(div);
         if (firstSaleDiv != null) document.querySelector(".product-sales-wrapper").appendChild(firstSaleDiv);
         if (secondSaleDiv != null) document.querySelector(".product-sales-wrapper").appendChild(secondSaleDiv);
         if (thirdSaleDiv != null) document.querySelector(".product-sales-wrapper").appendChild(thirdSaleDiv);
