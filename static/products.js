@@ -1,13 +1,4 @@
 const products = {
-    "test": {
-        "id": 1,
-        "name": "Testprodukt",
-        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,",
-        "price": 0.99,
-        "sale": true,
-        "priceNoSale": 1.49,
-        "imageSrc": "./static/productplaceholder.png",
-    },
     "banane": {
         "id": 2,
         "name": "Banane",
