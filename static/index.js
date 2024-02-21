@@ -22,8 +22,8 @@ const products = {
         "name": "ASUS GeForce RTX™ 3090 ROG Strix Gaming OC White 24GB",
         "description": "Eine GPU von ASUS in weiß die von Marcel Leven sehr begehrt wird, sie liefert die optimale Leistung für ihren PC!",
         "price": 1449.99,
-        "sale": false,
-        "priceNoSale": 1449.99,
+        "sale": true,
+        "priceNoSale": 1399.99,
         "imageSrc": "./static/3090.webp",
     },
     "felge": {
