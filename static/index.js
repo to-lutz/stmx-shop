@@ -24,7 +24,7 @@ const products = {
         "price": 2.99,
         "sale": false,
         "priceNoSale": 2.99,
-        "imageSrc": "./static/.jfif",
+        "imageSrc": "./static/3090.webp",
     },
     "felge": {
         "id": 4,
@@ -33,7 +33,7 @@ const products = {
         "price": 1545.00,
         "sale": false,
         "priceNoSale": 1545.00,
-        "imageSrc": "./static/.jfif",
+        "imageSrc": "./static/Felge.png",
     },  
     "salsa": {
         "id": 5,
@@ -42,7 +42,7 @@ const products = {
         "price": 5.00,
         "sale": false,
         "priceNoSale": 5.00,
-        "imageSrc": "./static/.jfif",
+        "imageSrc": "./static/SALSA.jpg",
     },
     "hotdog": {
         "id": 6,
@@ -51,7 +51,7 @@ const products = {
         "price": 1.00,
         "sale": false,
         "priceNoSale": 1.00,
-        "imageSrc": "./static/.jfif",
+        "imageSrc": "./static/HotDog.jpg",
     }
 };  
 
