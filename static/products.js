@@ -38,7 +38,7 @@ const products = {
     "salsa": {
         "id": 5,
         "name": "Tapatío Salsa Picante Hot Sauce 148ml",
-        "description": "",
+        "description": "Eine von Mexicos beliebtesten Soßen. <SLASA Y PICANTE>",
         "price": 4.95,
         "sale": false,
         "priceNoSale": 4.95,
