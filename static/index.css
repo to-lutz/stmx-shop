@@ -58,7 +58,7 @@ body {
 }
 
 .colormodeswitch-dark {
-	color: #fff;
+	color: blue;
 	cursor: pointer;
 }
 
@@ -81,7 +81,7 @@ body {
 .navbar a, .responsive-nav a{
 	font-style: none;
 	text-decoration: none;
-	color: #fff;
+	color: blue;
 }
 
 .navbar a.active, .responsive-nav a.active {
@@ -90,7 +90,7 @@ body {
 
 .nav-hamburger {
 	display: none !important;
-	color: #fff;
+	color: blue;
 	margin-right: 20px;
 }
 
@@ -144,7 +144,7 @@ body {
 .product{
 	border-radius: 7px;
 	padding: 30px;
-	background-color: #fff;
+	background-color: blue;
 	min-width: 450px;
 	margin: 25px;
 }
@@ -274,7 +274,7 @@ footer {
 
 .addtocart-modal-header, #addtocart-modal-item {
 	display: inline-block;
-	color: #fff;
+	color: blue;
 	text-align: center;
 }
 
@@ -309,7 +309,7 @@ footer {
 .addtocart-modal-continueshop-btn {
 	border-radius: 4px;
 	border: 1px solid rgba(112, 112, 112, 0.5);
-	background-color: #fff;
+	background-color: blue;
 	height: 30px;
 	color: #707070;
 	width: 40%;
@@ -333,7 +333,7 @@ footer {
 	flex-direction: column;
 	vertical-align: top;
 	text-align: center;
-	color: #fff;
+	color: blue;
 	width: 350px;
 }
 
