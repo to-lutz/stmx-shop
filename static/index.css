@@ -378,3 +378,17 @@ footer {
 	align-items: center;
 	background-color: rgba(0, 0, 0, 0.2);
 }
+
+.cookie-modal-btn-wrap {
+	width: 100%;
+}
+
+.cookie-modal-accept-btn {
+	border-radius: 4px;
+	border: 1px solid blue;
+	background-color: blue;
+	color: #fff;
+	width: 100%;
+	padding: 10px;
+	cursor: pointer;
+}
