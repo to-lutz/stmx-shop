@@ -36,7 +36,7 @@ const products = {
         "imageSrc": "./static/SALSA.png",
     },
     "hotdog": {
-        "id": 2,
+        "id": 6,
         "name": "IKEA HotDog",
         "description": "Jeder kennt ihn jeder liebt ihn den klassischen HotDog von IKEA zu Preis von 1.00€",
         "price": 1.00,
