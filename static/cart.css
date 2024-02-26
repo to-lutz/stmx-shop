@@ -277,8 +277,8 @@ body {
 
 .cart-checkout-btn {
 	border-radius: 4px;
-	border: 1px solid #d40606;
-	background-color: #d40606;
+	border: 1px solid blue;
+	background-color: blue;
 	width: 50%;
 	height: 30px;
 	color: #fff;
