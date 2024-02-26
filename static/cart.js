@@ -300,3 +300,9 @@ function getCookie(cname) {
 displayProducts();
 refreshTotalPrice();
 refreshTheme();
+
+// Cookie Modal Logic
+
+function cookiesEnabled() {
+    return getCookie("stmx_cookie_preferences") == "all";
+}
