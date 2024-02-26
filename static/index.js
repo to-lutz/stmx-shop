@@ -322,3 +322,22 @@ function addZeroes(num) {
 
 updateProductPage();
 refreshTheme();
+
+// Cookie Modal Logic
+if (getCookie("stmx_cookie_preferences") == "") {
+    document.querySelector(".cookie-modal-wrapper").style.display = "flex";
+}
+
+document.querySelector(".cookie-modal-accept-btn").addEventListener("click", (e) => {
+    document.querySelector(".cookie-modal-wrapper").style.display = "none";
+    setCookie("stmx_cookie_preferences", "all");
+});
+
+document.querySelector(".cookie-modal-decline-btn").addEventListener("click", (e) => {
+    document.querySelector(".cookie-modal-wrapper").style.display = "none";
+    setCookie("stmx_cookie_preferences", "none");
+});
+
+function cookiesEnabled() {
+    return getCookie("stmx_cookie_preferences") == "all";
+}
