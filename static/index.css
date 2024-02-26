@@ -379,7 +379,9 @@ footer {
 	background-color: rgba(0, 0, 0, 0.2);
 }
 
-.cookie-modal-btn-wrap {
+.cookie-modal-btnwrap {
+	display: flex;
+	justify-content: space-evenly;
 	width: 100%;
 }
 
@@ -388,7 +390,18 @@ footer {
 	border: 1px solid blue;
 	background-color: blue;
 	color: #fff;
-	width: 100%;
+	width: 35%;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.cookie-modal-decline-btn {
+	border-radius: 4px;
+	border: none;
+	background-color: transparent;
+	color: #fff;
+	text-decoration: underline;
+	width: 35%;
 	padding: 10px;
 	cursor: pointer;
 }
