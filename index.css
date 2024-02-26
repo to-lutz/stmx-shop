@@ -245,7 +245,7 @@ footer {
 	width: 50%;
 	height: 50px;
 	transform: skew(-20deg);
-	background: red;
+	background: blue;
 	display: flex;
 	justify-content: center;
 	align-items: center;
