@@ -143,6 +143,20 @@ body {
 	flex-wrap: wrap;
 }
 
+footer {
+    padding: 10px 0px;
+    background: #666;
+    color: #ffffff;
+    position:relative;
+    bottom: -30px;
+    width: 100%;
+	overflow: hidden;
+}
+
+.align-center {
+    text-align: center;
+}
+
 .probleme{
 	
 	font-size:2em;
