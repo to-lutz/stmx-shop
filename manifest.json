@@ -1,0 +1,14 @@
+{
+    "name": "STMX Shop",
+    "short_name": "STMX",
+    "start_url": "index.html",
+    "display": "standalone",
+    "theme_color": "#444444",
+    "icons": [
+    {
+        "src": "icon.png",
+        "type": "image/png",
+        "sizes": "192x192"
+    }
+    ]
+}

@@ -6,7 +6,7 @@ const products = {
         "price": 2.99,
         "sale": false,
         "priceNoSale": 2.99,
-        "imageSrc": "./static/banana.jfif",
+        "imageSrc": "./static/banana.png",
     },
     "3090": {
         "id": 3,
@@ -15,7 +15,7 @@ const products = {
         "price": 1399.99,
         "sale": true,
         "priceNoSale": 1449.99,
-        "imageSrc": "./static/3090.webp",
+        "imageSrc": "./static/3090.png",
     },
     "felge": {
         "id": 4,
@@ -33,16 +33,16 @@ const products = {
         "price": 4.95,
         "sale": false,
         "priceNoSale": 4.95,
-        "imageSrc": "./static/SALSA.jpg",
+        "imageSrc": "./static/SALSA.png",
     },
     "hotdog": {
-        "id": 6,
+        "id": 2,
         "name": "IKEA HotDog",
         "description": "Jeder kennt ihn jeder liebt ihn den klassischen HotDog von IKEA zu Preis von 1.00€",
         "price": 1.00,
         "sale": false,
         "priceNoSale": 1.00,
-        "imageSrc": "./static/HotDog.jpg",
+        "imageSrc": "./static/HotDog.png",
     }
 };  
 
