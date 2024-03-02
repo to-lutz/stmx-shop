@@ -1,0 +1,10 @@
+{
+    "name": "STMX Shop",
+    "icons": [
+    {
+        "src": "static/STMX-SHOP-DARK-NOBG.png",
+        "type": "image/png",
+        "sizes": "634x393"
+    }
+    ]
+}
