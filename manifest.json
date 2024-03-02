@@ -6,9 +6,9 @@
     "theme_color": "#444444",
     "icons": [
     {
-        "src": "static/STMX-SHOP-DARK-NOBG.png",
+        "src": "icon.png",
         "type": "image/png",
-        "sizes": "634x393"
+        "sizes": "192x192"
     }
     ]
 }
