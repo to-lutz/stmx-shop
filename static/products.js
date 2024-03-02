@@ -212,6 +212,7 @@ document.querySelectorAll("#lightmode").forEach((e) => {e.addEventListener("clic
 document.querySelectorAll("#darkmode").forEach((e) => {e.addEventListener("click", (e) => {setCookie("stmx_mode", "1", 365); refreshTheme();})});
 
 function setCookie(cname, cvalue, exdays) {
+    if (!cookiesEnabled) return;
     const d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     let expires = "expires="+ d.toUTCString();
@@ -243,3 +244,9 @@ function addZeroes(num) {
 
 updateProductPage();
 refreshTheme();
+
+// Cookie Modal Logic
+
+function cookiesEnabled() {
+    return getCookie("stmx_cookie_preferences") == "all";
+}
