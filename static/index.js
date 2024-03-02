@@ -43,8 +43,8 @@ const products = {
         "sale": false,
         "priceNoSale": 1.00,
         "imageSrc": "./static/HotDog.png",
-    }
-     "spritze": {
+    },
+    "spritze": {
         "id": 7,
         "name": "Spritze 1ml Kanüle",
         "description": "Eine hochpräzise Spritze für Sie und Ihn.",
