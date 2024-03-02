@@ -235,6 +235,13 @@ footer {
     text-align: center;
 }
 
+.align-center>a {
+	font-style: none;
+	text-decoration: none;
+	color: #fff;
+	cursor: pointer;
+}
+
 .banner-wrapper {
 	display: flex;
 	justify-content: center;

@@ -157,6 +157,13 @@ footer {
     text-align: center;
 }
 
+.align-center>a {
+	font-style: none;
+	text-decoration: none;
+	color: #fff;
+	cursor: pointer;
+}
+
 .probleme{
 	
 	font-size:2em;
