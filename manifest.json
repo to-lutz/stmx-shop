@@ -1,5 +1,9 @@
 {
     "name": "STMX Shop",
+    "short_name": "STMX",
+    "start_url": "index.html",
+    "display": "standalone",
+    "theme_color": "#444444",
     "icons": [
     {
         "src": "static/STMX-SHOP-DARK-NOBG.png",
