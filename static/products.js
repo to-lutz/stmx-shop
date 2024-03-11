@@ -36,13 +36,31 @@ const products = {
         "imageSrc": "./static/SALSA.png",
     },
     "hotdog": {
-        "id": 2,
+        "id": 6,
         "name": "IKEA HotDog",
         "description": "Jeder kennt ihn jeder liebt ihn den klassischen HotDog von IKEA zu Preis von 1.00€",
         "price": 1.00,
         "sale": false,
         "priceNoSale": 1.00,
         "imageSrc": "./static/HotDog.png",
+    },
+    "BMW": {
+        "id": 8,
+        "name": "BMW M3 E30 Red Limited Edition",
+        "description": "Das Ideale auto für jeden Tuningfan!",
+        "price": 30.000,
+        "sale": false,
+        "priceNoSale": 30.000,
+        "imageSrc": "./static/BMW_New.png",
+    },
+    "Turbo": {
+        "id": 9,
+        "name": "EJ 20/25 Turbolader",
+        "description": "Zwei hochwertige EJ20 oder EJ25 Turbolader für die beste Beschleunigung.",
+        "price": 3.000,
+        "sale": false,
+        "priceNoSale": 3.000,
+        "imageSrc": "./static/turbo_New.png",
     }
 };  
 
