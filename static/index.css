@@ -178,12 +178,12 @@ body {
 }
 
 .price-colour-red {
-	color: #ff3939;
+	color: #ff3939 !important;
 	display: inline-block;
 }
 
 .product-price-colour-red {
-	color: #ff3939;
+	color: #ff3939 !important;
 	display: inline-block;
 }
 
