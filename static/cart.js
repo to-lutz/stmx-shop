@@ -88,7 +88,7 @@ const products = {
         "sale": false,
         "priceNoSale": 0,
         "imageSrc": "./static/komma.png",
-    },
+    }
 };  
 
 function isSmallPage() {
