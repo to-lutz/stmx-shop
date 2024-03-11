@@ -61,6 +61,24 @@ const products = {
         "sale": false,
         "priceNoSale": 3000.,
         "imageSrc": "./static/turbo_New.png",
+    },
+    "spritze": {
+        "id": 7,
+        "name": "Spritze 1ml Kanüle",
+        "description": "Eine hochpräzise Spritze für Sie und Ihn.",
+        "price": 12.95,
+        "sale": false,
+        "priceNoSale": 12.95,
+        "imageSrc": "./static/spritze.png",
+    },
+    "mike": {
+        "id": 10,
+        "name": "Mike",
+        "description": "Hier sehen sie unseren sehr geschätzten Sponsor \"Mike\". Seine Dienstleistungen können sie für kleines Geld erwerben!",
+        "price": 17.95,
+        "sale": true,
+        "priceNoSale": 20000,
+        "imageSrc": "./static/mike.png",
     }
 };  
 

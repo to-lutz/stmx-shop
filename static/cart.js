@@ -59,7 +59,7 @@ const products = {
         "description": "Zwei hochwertige EJ20 oder EJ25 Turbolader für die beste Beschleunigung.",
         "price": 3000,
         "sale": false,
-        "priceNoSale": 3000,
+        "priceNoSale": 3000.,
         "imageSrc": "./static/turbo_New.png",
     },
     "spritze": {
@@ -71,6 +71,15 @@ const products = {
         "priceNoSale": 12.95,
         "imageSrc": "./static/spritze.png",
     },
+    "mike": {
+        "id": 10,
+        "name": "Mike",
+        "description": "Hier sehen sie unseren sehr geschätzten Sponsor \"Mike\".Seine Dienstleistungen können sie für kleines Geld erwerben!",
+        "price": 17.95,
+        "sale": true,
+        "priceNoSale": 20000,
+        "imageSrc": "./static/mike.png",
+    }
 };  
 
 function isSmallPage() {

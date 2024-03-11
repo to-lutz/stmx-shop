@@ -71,6 +71,15 @@ const products = {
         "priceNoSale": 12.95,
         "imageSrc": "./static/spritze.png",
     },
+    "mike": {
+        "id": 10,
+        "name": "Mike",
+        "description": "Hier sehen sie unseren sehr geschätzten Sponsor \"Mike\".Seine Dienstleistungen können sie für kleines Geld erwerben!",
+        "price": 17.95,
+        "sale": true,
+        "priceNoSale": 20000,
+        "imageSrc": "./static/mike.png",
+    }
 };  
 
 const ham = document.querySelector('.nav-hamburger');
