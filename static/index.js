@@ -44,34 +44,24 @@ const products = {
         "priceNoSale": 1.00,
         "imageSrc": "./static/HotDog.png",
     },
-    "spritze": {
-        "id": 7,
-        "name": "Spritze 1ml Kanüle",
-        "description": "Eine hochpräzise Spritze für Sie und Ihn.",
-        "price": 12.95,
-        "sale": false,
-        "priceNoSale": 12.95,
-        "imageSrc": "./static/spritze.png",
-    },
     "BMW": {
         "id": 8,
         "name": "BMW M3 E30 Red Limited Edition",
         "description": "Das Ideale auto für jeden Tuningfan!",
-        "price": 30.000,
+        "price": 30000,
         "sale": false,
-        "priceNoSale": 30.000,
+        "priceNoSale": 30000,
         "imageSrc": "./static/BMW_New.png",
     },
     "Turbo": {
         "id": 9,
         "name": "EJ 20/25 Turbolader",
         "description": "Zwei hochwertige EJ20 oder EJ25 Turbolader für die beste Beschleunigung.",
-        "price": 3.000,
+        "price": 3000,
         "sale": false,
-        "priceNoSale": 3.000,
+        "priceNoSale": 3000.,
         "imageSrc": "./static/turbo_New.png",
     }
-    
 };  
 
 const ham = document.querySelector('.nav-hamburger');
