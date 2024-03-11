@@ -79,7 +79,16 @@ const products = {
         "sale": true,
         "priceNoSale": 20000,
         "imageSrc": "./static/mike.png",
-    }
+    },
+     "kommma": {
+        "id": 11,
+        "name": "Komma fuer Maxi",
+        "description": "sehr wichtig!!",
+        "price": 0,
+        "sale": false,
+        "priceNoSale": 0,
+        "imageSrc": "./static/komma.png",
+    },
 };  
 
 function isSmallPage() {
