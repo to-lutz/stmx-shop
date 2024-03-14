@@ -386,13 +386,18 @@ document.querySelector(".cookie-modal-decline-btn").addEventListener("click", (e
 
 // Other Modal Logic
 let urlSearchParams = new URLSearchParams(window.location.search);
-if (urlSearchParams.get("modal").length > 0) {
+if (urlSearchParams.get("modal") != undefined) {
     document.querySelector(".other-modal-wrapper").style.display = "flex";
     document.querySelector(".other-modal-text").innerHTML = urlSearchParams.get("modal").replaceAll("'", "");
 } else {
     document.querySelector(".other-modal-wrapper").style.display = "none";
     document.querySelector(".other-modal-text").innerHTML = "-";
 }
+
+document.querySelector(".other-modal-ok-btn").addEventListener("click", (e) => {
+    document.querySelector(".other-modal-wrapper").style.display = "none";
+    window.location.href="/";
+});
 
 function cookiesEnabled() {
     return getCookie("stmx_cookie_preferences") == "all";
