@@ -181,6 +181,10 @@ footer {
 	font-size: 2em;
 }
 
-.other-type, .support-desc {
+.support-type {
+	display: block;
+}
+
+.other-type, .support-desc, .support-submit {
 	display: none;
 }

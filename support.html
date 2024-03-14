@@ -32,17 +32,18 @@
       <h1 class="header">Hilfe</h1>
       <form class="support-form">
         <label for="support-type">Um welche Art von Problem handelt es sich?</label>
-        <select name="Art des Problems" id="support-type">
+        <select name="Art des Problems" id="support-type" class="support-type">
           <option value="-">--Wählen sie ein Problem--</option>
           <option value="software">Probleme mit der Webseite</option>
           <option value="product">Warenmängel</option>
           <option value="payment">Probleme beim Bezahlvorgang</option>
           <option value="other">Sonstiges</option>
         </select>
-        <label for="other-type" class="other-type">Um welche Art von Problem handelt es sich?</label>
+        <label for="other-type" class="other-type">Beschreiben sie die Art ihres Problems:</label>
         <input type="text" id="other-type" class="other-type"/>
-        <label for="support-desc" class="support-desc">Beschreiben sie ihr Problem:</label>
+        <label for="support-desc" class="support-desc">Beschreiben sie ihr Problem detailliert:</label>
         <input type="text" id="support-desc" class="support-desc"/>
+        <button type="submit" class="support-submit">Abschicken</button>
       </form>
       </div>
       <footer>	
