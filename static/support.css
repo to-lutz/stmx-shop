@@ -189,10 +189,12 @@ footer {
 
 .support-type {
 	display: block;
+	margin: 5px 0;
 }
 
 .other-type, .support-desc, .support-submit {
-	display: none;
+	display: block;
+	margin: 5px 0;
 }
 
 .support-submit {
@@ -201,7 +203,6 @@ footer {
 	background-color: blue;
 	border-radius: 4px;
 	border: 1px solid blue;
-	width: 50%;
 	height: 30px;
 	color: #fff;
 }
