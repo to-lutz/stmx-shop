@@ -80,7 +80,7 @@ const products = {
         "priceNoSale": 20000,
         "imageSrc": "./static/mike.png",
     },
-     "kommma": {
+    "kommma": {
         "id": 11,
         "name": "Komma fuer Maxi",
         "description": "sehr wichtig!!",
@@ -383,6 +383,16 @@ document.querySelector(".cookie-modal-decline-btn").addEventListener("click", (e
     document.querySelector(".cookie-modal-wrapper").style.display = "none";
     setCookie("stmx_cookie_preferences", "none");
 });
+
+// Other Modal Logic
+let urlSearchParams = new URLSearchParams(window.location.search);
+if (urlSearchParams.get("modal").length > 0) {
+    document.querySelector(".other-modal-wrapper").style.display = "flex";
+    document.querySelector(".other-modal-text").innerHTML = urlSearchParams.get("modal").replaceAll("'", "");
+} else {
+    document.querySelector(".other-modal-wrapper").style.display = "none";
+    document.querySelector(".other-modal-text").innerHTML = "-";
+}
 
 function cookiesEnabled() {
     return getCookie("stmx_cookie_preferences") == "all";
