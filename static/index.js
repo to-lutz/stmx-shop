@@ -80,10 +80,10 @@ const products = {
         "priceNoSale": 20000,
         "imageSrc": "./static/mike.png",
     },
-    "kommma": {
+    "komma": {
         "id": 11,
         "name": "Komma fuer Maxi",
-        "description": "sehr wichtig!!",
+        "description": "Sehr wichtig!!",
         "price": 0,
         "sale": false,
         "priceNoSale": 0,
