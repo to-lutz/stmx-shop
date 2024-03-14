@@ -119,6 +119,11 @@ document.querySelector("#support-desc").addEventListener("input", (e) => {
     }
 });
 
+document.querySelector(".support-form").onsubmit = () => {
+    window.location.href= "/index.html?modal=\'Vielen Dank für die Meldung!<br>Wir bemühen uns stets um eine verbesserte Nutzererfahrung.\'";
+    return false;
+};
+
 function setCookie(cname, cvalue, exdays) {
     const d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
