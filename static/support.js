@@ -38,7 +38,8 @@ function refreshTheme() {
         document.querySelectorAll(".nav-hamburger").forEach((e) => e.style.color="#000");
 
         document.body.style.backgroundColor="#e9e9e9";
-        document.querySelector(".header").style.color="#000";
+        document.querySelectorAll(".header").forEach((e) => e.style.color="#000");
+        document.querySelectorAll("label").forEach((e) => e.style.color="#000");
     } else if (getCookie("stmx_mode") == ""){ // No mode set, default: dark mode
         setCookie("stmx_mode", "0", 365);
         refreshTheme();
@@ -66,7 +67,8 @@ function refreshTheme() {
         document.querySelectorAll(".nav-hamburger").forEach((e) => e.style.color="#fff");
 
         document.body.style.backgroundColor="#818181";
-        document.querySelector(".header").style.color="#fff";
+        document.querySelectorAll(".header").forEach((e) => e.style.color="#fff");
+        document.querySelectorAll("label").forEach((e) => e.style.color="#fff");
     }
 }
 
