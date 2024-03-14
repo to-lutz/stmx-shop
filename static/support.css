@@ -147,8 +147,8 @@ footer {
     padding: 10px 0px;
     background: #666;
     color: #ffffff;
-    position:relative;
-    bottom: -30px;
+    position: fixed;
+    bottom: 0;
     width: 100%;
 	overflow: hidden;
 }
