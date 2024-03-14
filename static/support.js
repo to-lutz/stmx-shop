@@ -38,7 +38,8 @@ function refreshTheme() {
         document.querySelectorAll(".nav-hamburger").forEach((e) => e.style.color="#000");
 
         document.body.style.backgroundColor="#e9e9e9";
-        document.querySelector(".header").style.color="#000";
+        document.querySelectorAll(".header").forEach((e) => e.style.color="#000");
+        document.querySelectorAll("label").forEach((e) => e.style.color="#000");
     } else if (getCookie("stmx_mode") == ""){ // No mode set, default: dark mode
         setCookie("stmx_mode", "0", 365);
         refreshTheme();
@@ -66,7 +67,8 @@ function refreshTheme() {
         document.querySelectorAll(".nav-hamburger").forEach((e) => e.style.color="#fff");
 
         document.body.style.backgroundColor="#818181";
-        document.querySelector(".header").style.color="#fff";
+        document.querySelectorAll(".header").forEach((e) => e.style.color="#fff");
+        document.querySelectorAll("label").forEach((e) => e.style.color="#fff");
     }
 }
 
@@ -86,6 +88,36 @@ ham.addEventListener("click", (e) => {
     }
 });
 
+document.querySelector("#support-type").addEventListener("click", (e) => {
+    if (!e.target.options[0].selected) {
+        if (e.target.options[4].selected) {
+            document.querySelectorAll(".support-desc").forEach((e) => e.style.display="none");
+            document.querySelectorAll(".other-type").forEach((e) => e.style.display="block");
+        } else {
+            document.querySelectorAll(".other-type").forEach((e) => e.style.display="none");
+            document.querySelectorAll(".support-desc").forEach((e) => e.style.display="block");
+        }
+    } else {
+        document.querySelectorAll(".other-type").forEach((e) => e.style.display="none");
+        document.querySelectorAll(".support-desc").forEach((e) => e.style.display="none");
+    }
+});
+
+document.querySelector("#other-type").addEventListener("input", (e) => {
+    if (e.target.value.length != 0) {
+        document.querySelectorAll(".support-desc").forEach((e) => e.style.display="block");
+    } else {
+        document.querySelectorAll(".support-desc").forEach((e) => e.style.display="none");
+    }
+});
+
+document.querySelector("#support-desc").addEventListener("input", (e) => {
+    if (e.target.value.length != 0) {
+        document.querySelectorAll(".support-submit").forEach((e) => e.style.display="block");
+    } else {
+        document.querySelectorAll(".support-submit").forEach((e) => e.style.display="none");
+    }
+});
 
 function setCookie(cname, cvalue, exdays) {
     const d = new Date();
