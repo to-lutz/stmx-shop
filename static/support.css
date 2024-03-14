@@ -188,3 +188,14 @@ footer {
 .other-type, .support-desc, .support-submit {
 	display: none;
 }
+
+.support-submit {
+	margin-top: 25px;
+	text-align: center;
+	background-color: blue;
+	border-radius: 4px;
+	border: 1px solid blue;
+	width: 50%;
+	height: 30px;
+	color: #fff;
+}
