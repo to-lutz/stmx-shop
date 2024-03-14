@@ -86,7 +86,7 @@ ham.addEventListener("click", (e) => {
     }
 });
 
-document.querySelector(".support-type").addEventListener("click", (e) => {
+document.querySelector("#support-type").addEventListener("click", (e) => {
     if (!e.target.options[0].selected) {
         if (e.target.options[4].selected) {
             document.querySelectorAll(".support-desc").forEach((e) => e.style.display="none");
