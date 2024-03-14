@@ -193,7 +193,7 @@ footer {
 }
 
 .other-type, .support-desc, .support-submit {
-	display: block;
+	display: none;
 	margin: 5px 0;
 }
 
