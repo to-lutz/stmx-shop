@@ -86,6 +86,36 @@ ham.addEventListener("click", (e) => {
     }
 });
 
+document.querySelector(".support-type").addEventListener("click", (e) => {
+    if (!e.target.options[0].selected) {
+        if (e.target.options[4].selected) {
+            document.querySelectorAll(".support-desc").forEach((e) => e.style.display="none");
+            document.querySelectorAll(".other-type").forEach((e) => e.style.display="block");
+        } else {
+            document.querySelectorAll(".other-type").forEach((e) => e.style.display="none");
+            document.querySelectorAll(".support-desc").forEach((e) => e.style.display="block");
+        }
+    } else {
+        document.querySelectorAll(".other-type").forEach((e) => e.style.display="none");
+        document.querySelectorAll(".support-desc").forEach((e) => e.style.display="none");
+    }
+});
+
+document.querySelector("#other-type").addEventListener("input", (e) => {
+    if (e.target.value.length != 0) {
+        document.querySelectorAll(".support-desc").forEach((e) => e.style.display="block");
+    } else {
+        document.querySelectorAll(".support-desc").forEach((e) => e.style.display="none");
+    }
+});
+
+document.querySelector("#support-desc").addEventListener("input", (e) => {
+    if (e.target.value.length != 0) {
+        document.querySelectorAll(".support-submit").forEach((e) => e.style.display="block");
+    } else {
+        document.querySelectorAll(".support-submit").forEach((e) => e.style.display="none");
+    }
+});
 
 function setCookie(cname, cvalue, exdays) {
     const d = new Date();
