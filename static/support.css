@@ -171,14 +171,16 @@ footer {
 	
 }
 
-.Problem{
-	
-	font-size:0.6em;
-	
-}
-
 .Box{
 	
 	width:100px;
 	
+}
+
+.label {
+	font-size: 2em;
+}
+
+.other-type, .support-desc {
+	display: none;
 }

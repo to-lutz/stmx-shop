@@ -30,17 +30,20 @@
     </div>
     <div class="wrapper">
       <h1 class="header">Hilfe</h1>
-      <div class="probleme">
-      <label for="Problem">Wähle ein problem :</label>
-
-        <select name="Problem" class="Problem">
-          <option value="volvo">Software</option>
-          <option value="saab">Einkaufs problem </option>
-          <option value="mercedes">mag nicht </option>
-          <option value="audi">Sonstiges</option>
+      <form class="support-form">
+        <label for="support-type">Um welche Art von Problem handelt es sich?</label>
+        <select name="Art des Problems" id="support-type">
+          <option value="-">--Wählen sie ein Problem--</option>
+          <option value="software">Probleme mit der Webseite</option>
+          <option value="product">Warenmängel</option>
+          <option value="payment">Probleme beim Bezahlvorgang</option>
+          <option value="other">Sonstiges</option>
         </select>
-      </div>
-      <h2> <div class="Box">	Beschreiben Sie ihr Problem: <input> </div> </h2>
+        <label for="other-type" class="other-type">Um welche Art von Problem handelt es sich?</label>
+        <input type="text" id="other-type" class="other-type"/>
+        <label for="support-desc" class="support-desc">Beschreiben sie ihr Problem:</label>
+        <input type="text" id="support-desc" class="support-desc"/>
+      </form>
       </div>
       <footer>	
         <p class="align-center">©&nbsp;2024&nbsp;stmx-shop.bplaced.net&nbsp;|&nbsp;Alle Rechte vorbehalten.</p>
