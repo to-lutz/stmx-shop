@@ -88,6 +88,15 @@ const products = {
         "sale": false,
         "priceNoSale": 0,
         "imageSrc": "./static/komma.png",
+    },
+    "jojo": {
+        "id": 12,
+        "name": "Johannes (aka. Markus Ruehl v2)",
+        "description": "Der einzig Wahre, der breiter ist als Markus Ruehl. Der Türsteher deines Vertrauens!",
+        "price": 3.19,
+        "sale": false,
+        "priceNoSale": 3.19,
+        "imageSrc": "./static/jojo.png",
     }
 };  
 
