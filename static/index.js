@@ -397,9 +397,11 @@ document.querySelector(".cookie-modal-decline-btn").addEventListener("click", (e
 let urlSearchParams = new URLSearchParams(window.location.search);
 if (urlSearchParams.get("modal") != undefined) {
     document.querySelector(".other-modal-wrapper").style.display = "flex";
+    document.querySelector(".other-modal").style.display = "flex";
     document.querySelector(".other-modal-text").innerHTML = urlSearchParams.get("modal").replaceAll("'", "");
 } else {
     document.querySelector(".other-modal-wrapper").style.display = "none";
+    document.querySelector(".other-modal").style.display = "none";
     document.querySelector(".other-modal-text").innerHTML = "-";
 }
 
