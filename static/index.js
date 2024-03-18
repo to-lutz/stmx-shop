@@ -106,6 +106,15 @@ const products = {
         "sale": false,
         "priceNoSale": 69.69,
         "imageSrc": "./static/xavier.png",
+    },
+    "marslsese": {
+        "id": 14,
+        "name": "Marcel Leven und Sebastian Müller",
+        "description": "Perfekt zum Spielen für Wer hat Angst vorm Schwarzen Mann.",
+        "price": 0.01,
+        "sale": false,
+        "priceNoSale": 0.01,
+        "imageSrc": "./static/marslundsese.png",
     }
 };  
 
