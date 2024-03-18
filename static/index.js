@@ -97,6 +97,15 @@ const products = {
         "sale": false,
         "priceNoSale": 3.19,
         "imageSrc": "./static/jojo.png",
+    },
+    "xavier": {
+        "id": 13,
+        "name": "Xa4",
+        "description": "Dein neuer Lieblingsginger, schneller verbrannt als dein Toast",
+        "price": 69.69,
+        "sale": false,
+        "priceNoSale": 69.69,
+        "imageSrc": "./static/xavier.png",
     }
 };  
 
