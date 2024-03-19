@@ -115,6 +115,15 @@ const products = {
         "sale": false,
         "priceNoSale": 0.01,
         "imageSrc": "./static/marslundsese.png",
+    },
+    "smokingmike": {
+        "id": 15,
+        "name": "Smoking Mike",
+        "description": "(Aus rechtlichen Gründen stimmte der abzubildende Homo Sapiens dieser Bildabänderung zu.)",
+        "price": 10.99,
+        "sale": true,
+        "priceNoSale": 11.99,
+        "imageSrc": "./static/smokingmike.png",
     }
 };  
 
