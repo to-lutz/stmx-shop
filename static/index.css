@@ -355,7 +355,7 @@ footer {
 
 .other-modal {
 	display: none;
-	z-index: 100;
+	z-index: 1000;
 	background-color: #444444;
 	border-radius: 7px;
 	flex-wrap: wrap;
