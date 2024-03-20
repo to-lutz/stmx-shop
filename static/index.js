@@ -142,6 +142,24 @@ const products = {
         "sale": false,
         "priceNoSale": 2.00,
         "imageSrc": "./static/filip.png",
+    },
+    "ben": {
+        "id": 18,
+        "name": "Ben Romer",
+        "description": "Ihre neue Premium Chaya",
+        "price": 5.99,
+        "sale": true,
+        "priceNoSale": 2.99,
+        "imageSrc": "./static/ben.png",
+    },
+    "waltundmike": {
+        "id": 19,
+        "name": "Walter #FFFFFF und Mike Mayer",
+        "description": "Wenns beim Kochen mal schnell gehen muss",
+        "price": 0.48,
+        "sale": false,
+        "priceNoSale": 0.48,
+        "imageSrc": "./static/waltundmike.png",
     }
 };  
 
