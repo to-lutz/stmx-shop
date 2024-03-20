@@ -124,6 +124,15 @@ const products = {
         "sale": true,
         "priceNoSale": 11.99,
         "imageSrc": "./static/smokingmike.png",
+    },
+    "ian": {
+        "id": 16,
+        "name": "I-ehnn",
+        "description": "Rund, Mützenheini, pip pop, 'koi ahnung', durchtrainierte Unterarme, massiv beharrt",
+        "price": 3500.00,
+        "sale": false,
+        "priceNoSale": 3500.00,
+        "imageSrc": "./static/ian.png",
     }
 };  
 
