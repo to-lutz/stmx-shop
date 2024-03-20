@@ -205,10 +205,10 @@ function updateProductPage() {
             <p class="product-description">` + product.description + `</p>
             <div class="product-footer">
                 <div class="product-price">
-                    <p class="price-text">Preis:&nbsp;<p class="product-price product-price-val product-price-colour-red">` + product.price + `€</p></p>
+                    <p class="price-text">Preis:&nbsp;<p class="product-price product-price-val product-price-colour-red">` + Number.parseFloat(product.price).toFixed(2) + `€</p></p>
                 </div>
                 <div class="product-price-sale">
-                (<p class="product-price-sale product-price-sale-val">` + product.priceNoSale + `€</p>)
+                (<p class="product-price-sale product-price-sale-val">` + Number.parseFloat(product.priceNoSale).toFixed(2) + `€</p>)
                 </div>
             </div>
             <button class="product-addtocart-btn" id="addtocart-` + product.id + `">Zum Warenkorb hinzufügen</button>
@@ -262,7 +262,7 @@ function updateProductPage() {
             <p class="product-description">` + product.description + `</p>
             <div class="product-footer">
                 <div class="product-price">
-                    <p class="price-text">Preis:&nbsp;<p class="product-price product-price-val">` + product.price + `€</p></p>
+                    <p class="price-text">Preis:&nbsp;<p class="product-price product-price-val">` + Number.parseFloat(product.price).toFixed(2) + `€</p></p>
                 </div>
             </div>
             <button class="product-addtocart-btn" id="addtocart-` + product.id + `">Zum Warenkorb hinzufügen</button>
