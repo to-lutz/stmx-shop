@@ -295,6 +295,7 @@ footer {
 	justify-content: center;
 	align-items: center;
 	background-color: rgba(0, 0, 0, 0.2);
+	z-index: 10000;
 }
 
 .addtocart-modal-btnwrap {
@@ -379,6 +380,7 @@ footer {
 	justify-content: center;
 	align-items: center;
 	background-color: rgba(0, 0, 0, 0.2);
+	z-index: 10000;
 }
 
 .other-modal-btnwrap {
@@ -428,6 +430,7 @@ footer {
 	justify-content: center;
 	align-items: center;
 	background-color: rgba(0, 0, 0, 0.2);
+	z-index: 1000;
 }
 
 .cookie-modal-btnwrap {
