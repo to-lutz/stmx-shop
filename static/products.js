@@ -133,6 +133,15 @@ const products = {
         "sale": false,
         "priceNoSale": 3500.00,
         "imageSrc": "./static/ian.png",
+    },
+    "filip": {
+        "id": 17,
+        "name": "Viliph",
+        "description": "Herausragend, im Falle einer benötigten, kleinen, spitzen Utilisation",
+        "price": 2.00,
+        "sale": false,
+        "priceNoSale": 2.00,
+        "imageSrc": "./static/filip.png",
     }
 };  
 
