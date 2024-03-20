@@ -290,7 +290,7 @@ function displayProducts() {
                     <input id="amount-` + product.id + `" class="cart-amount" type="number" value="1" min="0" max="99" onchange="updatePrice(` + product.price + `, ` + product.id + `, true, `+ product.priceNoSale + `)"/>
                 </div>
                 <div class="price-div">
-                    <p class="price-text">Preis:&nbsp;<strong><p class="price-text price-text-sale price-text-value" id="price-` + product.id + `">` + product.price + `€</p>&nbsp;<p class="price-text price-text-noSale" id="priceWithoutSale-` + product.id + `">(` + product.priceNoSale + `€)</p></strong></p>
+                    <p class="price-text">Preis:&nbsp;<strong><p class="price-text price-text-sale price-text-value" id="price-` + product.id + `">` + Number.parseFloat(product.price).toFixed(2) + `€</p>&nbsp;<p class="price-text price-text-noSale" id="priceWithoutSale-` + product.id + `">(` + product.priceNoSale + `€)</p></strong></p>
                 </div>
             </div>`.trim();
         } else {
@@ -306,7 +306,7 @@ function displayProducts() {
                     <input id="amount-` + product.id + `" class="cart-amount" type="number" value="1" min="0" max="99" onchange="updatePrice(` + product.price + `, ` + product.id + `, false, 0)"/>
                 </div>
                 <div class="price-div">
-                    <p class="price-text">Preis:&nbsp;<strong><p class="price-text price-text-value" id="price-` + product.id + `">` + product.price + `€</p></strong></p>
+                    <p class="price-text">Preis:&nbsp;<strong><p class="price-text price-text-value" id="price-` + product.id + `">` + Number.parseFloat(product.price).toFixed(2) + `€</p></strong></p>
                 </div>
             </div>`.trim();
         }
@@ -368,10 +368,7 @@ function updatePrice(price, elemID, isSale, priceNoSale) {
 }
 
 function addZeroes(num) {
-    num = String(num);
-    const dec = num.split('.')[1]
-    const len = dec && dec.length > 2 ? dec.length : 2
-    return Number(num).toFixed(len)
+    return Number(num).toFixed(2);
 }
 
 function refreshTotalPrice() {
