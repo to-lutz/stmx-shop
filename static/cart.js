@@ -337,6 +337,11 @@ function displayProducts() {
         //     </div>`.trim();
         // document.getElementById("cart-items-wrapper").appendChild(div);
     }
+    if (document.querySelector(".cart-items").childNodes.length <= 1) {
+        document.querySelector("footer").style.position = "absolute";
+    } else {
+        document.querySelector("footer").style.position = "";
+    }
 }
 
 function updatePrice(price, elemID, isSale, priceNoSale) {
@@ -347,6 +352,11 @@ function updatePrice(price, elemID, isSale, priceNoSale) {
         refreshTotalPrice();
         if (getCookie("stmx_cart_ids").replaceAll(":", "") == "") {
             document.querySelector(".cart-items").style.display = "none";
+        }
+        if (document.querySelector(".cart-items").childNodes.length <= 1) {
+            document.querySelector("footer").style.position = "absolute";
+        } else {
+            document.querySelector("footer").style.position = "";
         }
         return;
     }
